@@ -88,7 +88,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "NDAudioPlayer"
-  s.exclude_files = "Classes/Exclude/ViewController.m"
+  s.exclude_files = "Classes/**/VCs"
 
   # s.public_header_files = "Classes/**/*.h"
 
