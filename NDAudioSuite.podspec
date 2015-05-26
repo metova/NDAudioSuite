@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
   #
 
   #s.license      = "MIT"
-   s.license      = { :type => "MIT", :file => "LICENSE*.txt" }
+   s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -76,7 +76,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://metovabuild@bitbucket.org/metova/ndaudiosuite.git/master", :tag => "master" }
+  s.source       = { :git => "https://github.com/metova/NDAudioSuite", :tag => "1.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
