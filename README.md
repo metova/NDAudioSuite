@@ -10,7 +10,7 @@ To run the example project, clone the repo and run `pod install` from the Exampl
 
 ## Installation
 
-NDAudioSuite is available through [CocoaPods](https://cocoapods.org/?q=NDAudioSuite), to install
+NDAudioSuite is available through [CocoaPods](https://cocoapods.org/?q=NDAudioSuite). To install
 it, simply add the following line to your Podfile:
 
     pod 'NDAudioSuite', '~> 1.0'
