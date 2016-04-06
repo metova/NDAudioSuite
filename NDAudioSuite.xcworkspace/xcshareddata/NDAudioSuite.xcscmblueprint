@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "751990FCFD13D62B8F0462AE130658B60CD8EB84",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "751990FCFD13D62B8F0462AE130658B60CD8EB84" : 0,
+    "6DCA2E142753AF2155C133D64CCB569C6D80A2AE" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D63B46F5-EB0D-44EB-84A1-E1EE929035F0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "751990FCFD13D62B8F0462AE130658B60CD8EB84" : "NDAudioSuite3\/",
+    "6DCA2E142753AF2155C133D64CCB569C6D80A2AE" : "NDAudioSuite"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NDAudioSuite",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "NDAudioSuite.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/bitbucket.org\/metova\/NDAudioSuite.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6DCA2E142753AF2155C133D64CCB569C6D80A2AE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/metova\/NDAudioSuite.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "751990FCFD13D62B8F0462AE130658B60CD8EB84"
+    }
+  ]
+}

@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A4AE92F1A408F5E00E5F55E /* SongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AE92E1A408F5E00E5F55E /* SongsTableViewController.m */; };
-		3A4AE9331A4092FA00E5F55E /* SongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AE9321A4092FA00E5F55E /* SongTableViewCell.m */; };
-		3ABD672C1A36211D00E23A58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABD672B1A36211D00E23A58 /* main.m */; };
-		3ABD672F1A36211D00E23A58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABD672E1A36211D00E23A58 /* AppDelegate.m */; };
-		3ABD67321A36211D00E23A58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABD67311A36211D00E23A58 /* ViewController.m */; };
 		3ABD67351A36211D00E23A58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ABD67331A36211D00E23A58 /* Main.storyboard */; };
 		3ABD67371A36211D00E23A58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ABD67361A36211D00E23A58 /* Images.xcassets */; };
 		3ABD673A1A36211D00E23A58 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ABD67381A36211D00E23A58 /* LaunchScreen.xib */; };
@@ -19,6 +14,11 @@
 		3ABD67531A36228800E23A58 /* NDAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABD67501A36228800E23A58 /* NDAudioPlayer.m */; };
 		3ABD67541A36228800E23A58 /* NSMutableArray+Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABD67521A36228800E23A58 /* NSMutableArray+Shuffling.m */; };
 		3ADD64521A40AEE900C8AA55 /* NDAudioDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD64511A40AEE900C8AA55 /* NDAudioDownloadManager.m */; };
+		3AEA7EFC1C9313DA00ABDB80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA7EFB1C9313DA00ABDB80 /* main.m */; };
+		3AEA7EFF1C9313E400ABDB80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA7EFE1C9313E400ABDB80 /* AppDelegate.m */; };
+		3AEA7F061C9313ED00ABDB80 /* SongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA7F011C9313ED00ABDB80 /* SongsTableViewController.m */; };
+		3AEA7F071C9313ED00ABDB80 /* SongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA7F031C9313ED00ABDB80 /* SongTableViewCell.m */; };
+		3AEA7F081C9313ED00ABDB80 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA7F051C9313ED00ABDB80 /* ViewController.m */; };
 		B6ABEDB2B20501591F8317A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2F3D16A5B8DD1C4DA23F62 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -34,18 +34,9 @@
 
 /* Begin PBXFileReference section */
 		2C2F3D16A5B8DD1C4DA23F62 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A4AE92D1A408F5E00E5F55E /* SongsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongsTableViewController.h; sourceTree = "<group>"; };
-		3A4AE92E1A408F5E00E5F55E /* SongsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongsTableViewController.m; sourceTree = "<group>"; };
-		3A4AE9311A4092FA00E5F55E /* SongTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongTableViewCell.h; sourceTree = "<group>"; };
-		3A4AE9321A4092FA00E5F55E /* SongTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongTableViewCell.m; sourceTree = "<group>"; };
 		3A4AE9351A409B4700E5F55E /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		3ABD67261A36211D00E23A58 /* NDAudioSuite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NDAudioSuite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ABD672A1A36211D00E23A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3ABD672B1A36211D00E23A58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3ABD672D1A36211D00E23A58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3ABD672E1A36211D00E23A58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3ABD67301A36211D00E23A58 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3ABD67311A36211D00E23A58 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3ABD67341A36211D00E23A58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3ABD67361A36211D00E23A58 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3ABD67391A36211D00E23A58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -58,6 +49,15 @@
 		3ABD67521A36228800E23A58 /* NSMutableArray+Shuffling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffling.m"; sourceTree = "<group>"; };
 		3ADD64501A40AEE900C8AA55 /* NDAudioDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAudioDownloadManager.h; sourceTree = "<group>"; };
 		3ADD64511A40AEE900C8AA55 /* NDAudioDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAudioDownloadManager.m; sourceTree = "<group>"; };
+		3AEA7EFB1C9313DA00ABDB80 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = VCs/main.m; sourceTree = "<group>"; };
+		3AEA7EFD1C9313E400ABDB80 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = VCs/AppDelegate.h; sourceTree = "<group>"; };
+		3AEA7EFE1C9313E400ABDB80 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = VCs/AppDelegate.m; sourceTree = "<group>"; };
+		3AEA7F001C9313ED00ABDB80 /* SongsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SongsTableViewController.h; path = VCs/SongsTableViewController.h; sourceTree = "<group>"; };
+		3AEA7F011C9313ED00ABDB80 /* SongsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SongsTableViewController.m; path = VCs/SongsTableViewController.m; sourceTree = "<group>"; };
+		3AEA7F021C9313ED00ABDB80 /* SongTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SongTableViewCell.h; path = VCs/SongTableViewCell.h; sourceTree = "<group>"; };
+		3AEA7F031C9313ED00ABDB80 /* SongTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SongTableViewCell.m; path = VCs/SongTableViewCell.m; sourceTree = "<group>"; };
+		3AEA7F041C9313ED00ABDB80 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = VCs/ViewController.h; sourceTree = "<group>"; };
+		3AEA7F051C9313ED00ABDB80 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = VCs/ViewController.m; sourceTree = "<group>"; };
 		3D513489458490A92FF2C4A4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		841B38C095772C489DA18F1C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,15 +96,6 @@
 				841B38C095772C489DA18F1C /* Pods.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		3A4AE9301A4092DC00E5F55E /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				3A4AE9311A4092FA00E5F55E /* SongTableViewCell.h */,
-				3A4AE9321A4092FA00E5F55E /* SongTableViewCell.m */,
-			);
-			name = Cells;
 			sourceTree = "<group>";
 		};
 		3A4AE9341A40968400E5F55E /* NDAudioSuite */ = {
@@ -155,7 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				3ABD672A1A36211D00E23A58 /* Info.plist */,
-				3ABD672B1A36211D00E23A58 /* main.m */,
+				3AEA7EFB1C9313DA00ABDB80 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -180,11 +171,12 @@
 		3ABD67551A37408B00E23A58 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				3A4AE9301A4092DC00E5F55E /* Cells */,
-				3ABD67301A36211D00E23A58 /* ViewController.h */,
-				3ABD67311A36211D00E23A58 /* ViewController.m */,
-				3A4AE92D1A408F5E00E5F55E /* SongsTableViewController.h */,
-				3A4AE92E1A408F5E00E5F55E /* SongsTableViewController.m */,
+				3AEA7F001C9313ED00ABDB80 /* SongsTableViewController.h */,
+				3AEA7F011C9313ED00ABDB80 /* SongsTableViewController.m */,
+				3AEA7F021C9313ED00ABDB80 /* SongTableViewCell.h */,
+				3AEA7F031C9313ED00ABDB80 /* SongTableViewCell.m */,
+				3AEA7F041C9313ED00ABDB80 /* ViewController.h */,
+				3AEA7F051C9313ED00ABDB80 /* ViewController.m */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -192,8 +184,8 @@
 		3ABD67561A37409B00E23A58 /* App Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				3ABD672D1A36211D00E23A58 /* AppDelegate.h */,
-				3ABD672E1A36211D00E23A58 /* AppDelegate.m */,
+				3AEA7EFD1C9313E400ABDB80 /* AppDelegate.h */,
+				3AEA7EFE1C9313E400ABDB80 /* AppDelegate.m */,
 			);
 			name = "App Delegate";
 			sourceTree = "<group>";
@@ -359,14 +351,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A4AE92F1A408F5E00E5F55E /* SongsTableViewController.m in Sources */,
-				3ABD67321A36211D00E23A58 /* ViewController.m in Sources */,
+				3AEA7F061C9313ED00ABDB80 /* SongsTableViewController.m in Sources */,
 				3ADD64521A40AEE900C8AA55 /* NDAudioDownloadManager.m in Sources */,
-				3A4AE9331A4092FA00E5F55E /* SongTableViewCell.m in Sources */,
-				3ABD672F1A36211D00E23A58 /* AppDelegate.m in Sources */,
-				3ABD672C1A36211D00E23A58 /* main.m in Sources */,
+				3AEA7F081C9313ED00ABDB80 /* ViewController.m in Sources */,
+				3AEA7F071C9313ED00ABDB80 /* SongTableViewCell.m in Sources */,
 				3ABD67541A36228800E23A58 /* NSMutableArray+Shuffling.m in Sources */,
+				3AEA7EFC1C9313DA00ABDB80 /* main.m in Sources */,
 				3ABD67531A36228800E23A58 /* NDAudioPlayer.m in Sources */,
+				3AEA7EFF1C9313E400ABDB80 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +485,9 @@
 				INFOPLIST_FILE = NDAudioPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.metova.digitaldoorviewer;
 				PRODUCT_NAME = NDAudioSuite;
+				PROVISIONING_PROFILE = "bf7c69ec-a376-4f4d-87ea-26ad4ff9f9c7";
 			};
 			name = Debug;
 		};
@@ -506,7 +500,9 @@
 				INFOPLIST_FILE = NDAudioPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.metova.digitaldoorviewer;
 				PRODUCT_NAME = NDAudioSuite;
+				PROVISIONING_PROFILE = "d50b0291-df7a-4e4b-beb3-38c280382c80";
 			};
 			name = Release;
 		};

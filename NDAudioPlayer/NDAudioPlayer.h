@@ -101,6 +101,7 @@ typedef NS_ENUM(NSInteger, PlaybackStatus)
  */
 - (void) setAudioVolume:(CGFloat)newVolume;
 - (CGFloat) getTotalDuration;
+- (CGFloat) getAudioCurrentTime;
 - (CGFloat)getAudioVolume;
 - (void)fadeOutWithIntervals:(CGFloat)interval;
 
