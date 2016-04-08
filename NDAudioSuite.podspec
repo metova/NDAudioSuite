@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "NDAudioSuite"
-s.version      = "1.1"
+s.version      = "1.2"
 s.summary      = "An audio library with audio streaming and downloading built in."
 
 s.description  = <<-DESC
@@ -16,7 +16,7 @@ s.homepage     = "http://www.metova.com"
 s.license      = { :type => "MIT", :file => "LICENSE" }
 s.authors            = { "Drew Pitchford" => "drew.pitchford@metova.com", "Nick Sinas" => "nick.sinas@metova.com" }
 s.platform     = :ios, "7.0"
-s.source       = { :git => "https://github.com/metova/NDAudioSuite.git", :tag => "1.1" }
+s.source       = { :git => "https://github.com/metova/NDAudioSuite.git", :tag => "1.2" }
 s.source_files  = "NDAudioPlayer"
 s.exclude_files = "NDAudioSuite/NDAudioPlayer/VCs"
 end
