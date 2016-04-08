@@ -61,6 +61,7 @@
         _isPlaying = NO;
         _isStopped = YES;
         _isPaused = NO;
+        _timeScale = 1;
     }
     return self;
 }
@@ -239,12 +240,19 @@
                                       options:0
                                       context:nil];
     
-    __weak NDAudioPlayer *blockSelf = self;
-    timeObserver = [self.audioPlayer addPeriodicTimeObserverForInterval:CMTimeMake(1, 1) queue:nil usingBlock:^(CMTime time) {
-        [blockSelf notifyAudioDurationDelegate];
-    }];
+    [self setTimeObserverIntervalWithTimeScale:(int)self.timeScale];
     
     self.isPlaying = YES;
+}
+
+- (void)setTimeObserverIntervalWithTimeScale:(int)timeScale
+{
+    [self.audioPlayer removeTimeObserver:timeObserver];
+    
+    __weak NDAudioPlayer *blockSelf = self;
+    timeObserver = [self.audioPlayer addPeriodicTimeObserverForInterval:CMTimeMake(1, timeScale) queue:nil usingBlock:^(CMTime time) {
+        [blockSelf notifyAudioDurationDelegate];
+    }];
 }
 
 - (void) setupShuffleTable

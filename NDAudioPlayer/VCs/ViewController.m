@@ -311,6 +311,7 @@ currentDownloadIsCompleteWithRemainingDownloads:(NSUInteger)count
 
 - (void)NDAudioPlayerTimeIsUpdated:(NDAudioPlayer *)sender withDuration:(CGFloat)duration
 {
+    NSLog(@"Duration: %f", duration);
     self.currentTime = duration;
     [self.progressBar setProgress:duration/[self.player getTotalDuration]
                          animated:YES];

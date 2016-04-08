@@ -43,32 +43,34 @@ typedef NS_ENUM(NSInteger, PlaybackStatus)
 
 @protocol NDAudioPlayerDelegate <NSObject>
 
+@optional
 // Notifies delegate that audio is ready to play
-- (void) NDAudioPlayerIsReady: (NDAudioPlayer *)sender;
+- (void) NDAudioPlayerIsReady: (NDAudioPlayer * _Nonnull)sender;
 
 // Playlist Complete - would indicate no other tracks can be played
-- (void) NDAudioPlayerPlaylistIsDone: (NDAudioPlayer *)sender;
+- (void) NDAudioPlayerPlaylistIsDone: (NDAudioPlayer * _Nonnull)sender;
 
 // Track Complete - returns the next index track to be played
-- (void) NDAudioPlayerTrackIsDone: (NDAudioPlayer *)sender
+- (void) NDAudioPlayerTrackIsDone: (NDAudioPlayer * _Nonnull)sender
                    nextTrackIndex:(NSInteger)index;
 
 // gives delegate current time on the track being played
-- (void) NDAudioPlayerTimeIsUpdated: (NDAudioPlayer *)sender
+- (void) NDAudioPlayerTimeIsUpdated: (NDAudioPlayer * _Nonnull)sender
                        withDuration:(CGFloat)duration;
 
 @end
 
 @interface NDAudioPlayer : NSObject
 
-@property (nonatomic, weak) id <NDAudioPlayerDelegate> delegate;
+@property (nullable, nonatomic, weak) id <NDAudioPlayerDelegate> delegate;
 
 @property (assign, nonatomic) BOOL isPlaying;
 @property (assign, nonatomic) BOOL isStopped;
 @property (assign, nonatomic) BOOL isPaused;
+@property (assign, nonatomic) NSInteger timeScale;
 
 /* prepareToPlay must be called before playAudio is called */
-- (void) prepareToPlay:(NSMutableArray *)playlist
+- (void) prepareToPlay:(NSMutableArray * _Nonnull)playlist
                atIndex:(NSInteger)index
              atVolumne:(CGFloat)volumne;
 
@@ -101,7 +103,6 @@ typedef NS_ENUM(NSInteger, PlaybackStatus)
  */
 - (void) setAudioVolume:(CGFloat)newVolume;
 - (CGFloat) getTotalDuration;
-- (CGFloat) getAudioCurrentTime;
 - (CGFloat)getAudioVolume;
 - (void)fadeOutWithIntervals:(CGFloat)interval;
 
@@ -112,7 +113,7 @@ typedef NS_ENUM(NSInteger, PlaybackStatus)
 - (void)rewindToTime:(CGFloat) time;
 
 // give the audio player an entirely new playlist
-- (void)setPlaylistToArray:(NSMutableArray *)newPlaylist;
+- (void)setPlaylistToArray:(NSMutableArray * _Nonnull)newPlaylist;
 
 
 @end
