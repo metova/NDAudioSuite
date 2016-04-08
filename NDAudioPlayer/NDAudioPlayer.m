@@ -331,27 +331,39 @@
 // Notifies delegate that audio is ready to play
 - (void) notifyAudioReadyDelegate
 {
-    [self.delegate NDAudioPlayerIsReady:self];
+    if([self.delegate respondsToSelector:@selector(NDAudioPlayerIsReady:)])
+    {
+        [self.delegate NDAudioPlayerIsReady:self];
+    }
 }
 
 // Playlist Complete - would indicate no other tracks can be played
 - (void) notifyAudioPlaylistDoneDelegate
 {
-    [self.delegate NDAudioPlayerPlaylistIsDone:self];
+    if([self.delegate respondsToSelector:@selector(NDAudioPlayerPlaylistIsDone:)])
+    {
+        [self.delegate NDAudioPlayerPlaylistIsDone:self];
+    }
 }
 
 // Track Complete - returns the next index track to be played
 - (void) notifyAudioTrackDoneDelegate
 {
-    [self.delegate NDAudioPlayerTrackIsDone:self
-                             nextTrackIndex:currentTrackIndex];
+    if([self.delegate respondsToSelector:@selector(NDAudioPlayerTrackIsDone:nextTrackIndex:)])
+    {
+        [self.delegate NDAudioPlayerTrackIsDone:self
+                                 nextTrackIndex:currentTrackIndex];
+    }
 }
 
 // gives delegate current time on the track being played
 - (void) notifyAudioDurationDelegate
 {
-    [self.delegate NDAudioPlayerTimeIsUpdated:self
-                                 withDuration:[self getAudioCurrentTime]];
+    if([self.delegate respondsToSelector:@selector(NDAudioPlayerTimeIsUpdated:withDuration:)])
+    {
+        [self.delegate NDAudioPlayerTimeIsUpdated:self
+                                     withDuration:[self getAudioCurrentTime]];
+    }
 }
 
 
