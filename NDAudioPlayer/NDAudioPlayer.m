@@ -62,6 +62,8 @@
         _isStopped = YES;
         _isPaused = NO;
         _timeScale = 1;
+        
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionInterruptSpokenAudioAndMixWithOthers error:nil];
     }
     return self;
 }
