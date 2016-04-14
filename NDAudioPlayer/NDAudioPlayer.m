@@ -62,8 +62,6 @@
         _isStopped = YES;
         _isPaused = NO;
         _timeScale = 1;
-        
-        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionInterruptSpokenAudioAndMixWithOthers error:nil];
     }
     return self;
 }
@@ -222,7 +220,7 @@
 - (void) setupAudioPlayer
 {
     AVAudioSession* audioSession = [AVAudioSession sharedInstance];
-    [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
+    [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
     
     NSURL *audioURL = [NSURL URLWithString:self.playlist[[self getCurrentTrackIndex]]];
     
