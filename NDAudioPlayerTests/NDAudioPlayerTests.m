@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "NDAudioPlayer.h"
-#import "NDAudioDownloadManager.h"
+#import "NDAudioSuite.h"
 
 @interface NDAudioPlayer (UnitTest)
 
