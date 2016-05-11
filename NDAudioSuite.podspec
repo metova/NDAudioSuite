@@ -1,22 +1,24 @@
-
 Pod::Spec.new do |s|
+    s.name         = "NDAudioSuite"
+    s.version      = "1.3.2"
+    s.summary      = "An audio library with audio streaming and downloading built in."
+    s.description  = <<-DESC
+                   NDAudioSuite was written so that you will no longer have to write audio
+                   players or audio downloaders for your app. It has a built in audio player
+                   that can stream audio from a URL. It also has a built in download manager 
+                   for audio files.
+                    DESC
 
-s.name         = "NDAudioSuite"
-s.version      = "1.3.2"
-s.summary      = "An audio library with audio streaming and downloading built in."
+    s.homepage     = "http://www.metova.com"
+    s.license      = { :type => "MIT", :file => "LICENSE" }
+    s.authors      = {
+        "Drew Pitchford" => "drew.pitchford@metova.com",
+        "Nick Sinas" => "nick.sinas@metova.com"
+    }
 
-s.description  = <<-DESC
-			   NDAudioSuite was written so that you will no longer have to write audio
-			   players or audio downloaders for your app. It has a built in audio player
-			   that can stream audio from a URL. It also has a built in download manager 
-			   for audio files.
-				DESC
+    s.platform     = :ios, "8.0"
+    s.source       = { :git => "https://github.com/metova/NDAudioSuite.git", :tag => s.version.to_s }
 
-s.homepage     = "http://www.metova.com"
-s.license      = { :type => "MIT", :file => "LICENSE" }
-s.authors            = { "Drew Pitchford" => "drew.pitchford@metova.com", "Nick Sinas" => "nick.sinas@metova.com" }
-s.platform     = :ios, "7.0"
-s.source       = { :git => "https://github.com/metova/NDAudioSuite.git", :tag => "1.3.2" }
-s.source_files  = "NDAudioPlayer"
-s.exclude_files = "NDAudioSuite/NDAudioPlayer/VCs"
+    s.source_files  = "NDAudioPlayer"
+    s.exclude_files = "NDAudioSuite/NDAudioPlayer/VCs"
 end
