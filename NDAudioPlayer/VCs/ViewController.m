@@ -8,8 +8,7 @@
 
 #import "ViewController.h"
 #import "Constants.h"
-#import "NDAudioPlayer.h"
-#import "NDAudioDownloadManager.h"
+#import "NDAudioSuite.h"
 #import <MediaPlayer/MPNowPlayingInfoCenter.h>
 #import <MediaPlayer/MPMediaItem.h>
 #import <MediaPlayer/MediaPlayer.h>

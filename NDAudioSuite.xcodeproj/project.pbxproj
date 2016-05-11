@@ -11,27 +11,54 @@
 		3ABD67371A36211D00E23A58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ABD67361A36211D00E23A58 /* Images.xcassets */; };
 		3ABD673A1A36211D00E23A58 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ABD67381A36211D00E23A58 /* LaunchScreen.xib */; };
 		3ABD67461A36211D00E23A58 /* NDAudioPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABD67451A36211D00E23A58 /* NDAudioPlayerTests.m */; };
-		3ABD67531A36228800E23A58 /* NDAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABD67501A36228800E23A58 /* NDAudioPlayer.m */; };
-		3ABD67541A36228800E23A58 /* NSMutableArray+Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABD67521A36228800E23A58 /* NSMutableArray+Shuffling.m */; };
-		3ADD64521A40AEE900C8AA55 /* NDAudioDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD64511A40AEE900C8AA55 /* NDAudioDownloadManager.m */; };
 		3AEA7EFC1C9313DA00ABDB80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA7EFB1C9313DA00ABDB80 /* main.m */; };
 		3AEA7EFF1C9313E400ABDB80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA7EFE1C9313E400ABDB80 /* AppDelegate.m */; };
 		3AEA7F061C9313ED00ABDB80 /* SongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA7F011C9313ED00ABDB80 /* SongsTableViewController.m */; };
 		3AEA7F071C9313ED00ABDB80 /* SongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA7F031C9313ED00ABDB80 /* SongTableViewCell.m */; };
 		3AEA7F081C9313ED00ABDB80 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA7F051C9313ED00ABDB80 /* ViewController.m */; };
 		4AB081001CE3F50F00C5C26E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4AB080FF1CE3F50F00C5C26E /* .gitignore */; };
+		4AB0810E1CE3F98900C5C26E /* NDAudioSuite.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB0810D1CE3F98900C5C26E /* NDAudioSuite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AB081121CE3F98900C5C26E /* NDAudioSuite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB0810B1CE3F98900C5C26E /* NDAudioSuite.framework */; };
+		4AB081131CE3F98900C5C26E /* NDAudioSuite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB0810B1CE3F98900C5C26E /* NDAudioSuite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4AB081181CE3F9A400C5C26E /* NDAudioDownloadManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ADD64501A40AEE900C8AA55 /* NDAudioDownloadManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AB081191CE3F9A400C5C26E /* NDAudioDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADD64511A40AEE900C8AA55 /* NDAudioDownloadManager.m */; };
+		4AB0811A1CE3F9A400C5C26E /* NDAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABD674F1A36228800E23A58 /* NDAudioPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AB0811B1CE3F9A400C5C26E /* NDAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABD67501A36228800E23A58 /* NDAudioPlayer.m */; };
+		4AB0811C1CE3F9A400C5C26E /* NSMutableArray+Shuffling.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABD67511A36228800E23A58 /* NSMutableArray+Shuffling.h */; };
+		4AB0811D1CE3F9A400C5C26E /* NSMutableArray+Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABD67521A36228800E23A58 /* NSMutableArray+Shuffling.m */; };
 		B6ABEDB2B20501591F8317A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2F3D16A5B8DD1C4DA23F62 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3ABD67401A36211D00E23A58 /* PBXContainerItemProxy */ = {
+		4AB081101CE3F98900C5C26E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3ABD671E1A36211D00E23A58 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3ABD67251A36211D00E23A58;
-			remoteInfo = NDAudioPlayer;
+			remoteGlobalIDString = 4AB0810A1CE3F98900C5C26E;
+			remoteInfo = NDAudioSuite;
+		};
+		4AB0811E1CE3FA9E00C5C26E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3ABD671E1A36211D00E23A58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AB0810A1CE3F98900C5C26E;
+			remoteInfo = NDAudioSuite;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4AB081171CE3F98900C5C26E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4AB081131CE3F98900C5C26E /* NDAudioSuite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2C2F3D16A5B8DD1C4DA23F62 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +98,9 @@
 		4AB081031CE3F65500C5C26E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		4AB081041CE3F6D900C5C26E /* .travis.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		4AB081051CE3F7CF00C5C26E /* .slather.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .slather.yml; sourceTree = "<group>"; };
+		4AB0810B1CE3F98900C5C26E /* NDAudioSuite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NDAudioSuite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AB0810D1CE3F98900C5C26E /* NDAudioSuite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NDAudioSuite.h; path = ../NDAudioSuite/NDAudioSuite.h; sourceTree = "<group>"; };
+		4AB0810F1CE3F98900C5C26E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../NDAudioSuite/Info.plist; sourceTree = "<group>"; };
 		841B38C095772C489DA18F1C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,11 +109,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AB081121CE3F98900C5C26E /* NDAudioSuite.framework in Frameworks */,
 				B6ABEDB2B20501591F8317A0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3ABD673C1A36211D00E23A58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AB081071CE3F98900C5C26E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -113,6 +151,8 @@
 		3A4AE9341A40968400E5F55E /* NDAudioSuite */ = {
 			isa = PBXGroup;
 			children = (
+				4AB0810D1CE3F98900C5C26E /* NDAudioSuite.h */,
+				4AB0810F1CE3F98900C5C26E /* Info.plist */,
 				3ADD64541A40B2EE00C8AA55 /* NDDownloadManager */,
 				3ADD64531A40B2DD00C8AA55 /* NDAudioPlayer */,
 			);
@@ -136,6 +176,7 @@
 			children = (
 				3ABD67261A36211D00E23A58 /* NDAudioSuite.app */,
 				3ABD673F1A36211D00E23A58 /* NDAudioSuiteTests.xctest */,
+				4AB0810B1CE3F98900C5C26E /* NDAudioSuite.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,10 +284,24 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		4AB081081CE3F98900C5C26E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AB0811A1CE3F9A400C5C26E /* NDAudioPlayer.h in Headers */,
+				4AB0810E1CE3F98900C5C26E /* NDAudioSuite.h in Headers */,
+				4AB081181CE3F9A400C5C26E /* NDAudioDownloadManager.h in Headers */,
+				4AB0811C1CE3F9A400C5C26E /* NSMutableArray+Shuffling.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		3ABD67251A36211D00E23A58 /* NDAudioSuite */ = {
+		3ABD67251A36211D00E23A58 /* NDAudioSuiteSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3ABD67491A36211D00E23A58 /* Build configuration list for PBXNativeTarget "NDAudioSuite" */;
+			buildConfigurationList = 3ABD67491A36211D00E23A58 /* Build configuration list for PBXNativeTarget "NDAudioSuiteSample" */;
 			buildPhases = (
 				8C4145A4EC8DD9CD71FEB695 /* Check Pods Manifest.lock */,
 				3ABD67221A36211D00E23A58 /* Sources */,
@@ -254,12 +309,14 @@
 				3ABD67241A36211D00E23A58 /* Resources */,
 				38C291FAEAFD391E2BF6ABC8 /* Copy Pods Resources */,
 				164D1EB39F021F17894F4C44 /* Embed Pods Frameworks */,
+				4AB081171CE3F98900C5C26E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4AB081111CE3F98900C5C26E /* PBXTargetDependency */,
 			);
-			name = NDAudioSuite;
+			name = NDAudioSuiteSample;
 			productName = NDAudioPlayer;
 			productReference = 3ABD67261A36211D00E23A58 /* NDAudioSuite.app */;
 			productType = "com.apple.product-type.application";
@@ -275,12 +332,30 @@
 			buildRules = (
 			);
 			dependencies = (
-				3ABD67411A36211D00E23A58 /* PBXTargetDependency */,
+				4AB0811F1CE3FA9E00C5C26E /* PBXTargetDependency */,
 			);
 			name = NDAudioSuiteTests;
 			productName = NDAudioPlayerTests;
 			productReference = 3ABD673F1A36211D00E23A58 /* NDAudioSuiteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4AB0810A1CE3F98900C5C26E /* NDAudioSuite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AB081141CE3F98900C5C26E /* Build configuration list for PBXNativeTarget "NDAudioSuite" */;
+			buildPhases = (
+				4AB081061CE3F98900C5C26E /* Sources */,
+				4AB081071CE3F98900C5C26E /* Frameworks */,
+				4AB081081CE3F98900C5C26E /* Headers */,
+				4AB081091CE3F98900C5C26E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NDAudioSuite;
+			productName = NDAudioSuite;
+			productReference = 4AB0810B1CE3F98900C5C26E /* NDAudioSuite.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -304,6 +379,10 @@
 						CreatedOnToolsVersion = 6.1;
 						TestTargetID = 3ABD67251A36211D00E23A58;
 					};
+					4AB0810A1CE3F98900C5C26E = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = FGNAM5PJD7;
+					};
 				};
 			};
 			buildConfigurationList = 3ABD67211A36211D00E23A58 /* Build configuration list for PBXProject "NDAudioSuite" */;
@@ -319,8 +398,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3ABD67251A36211D00E23A58 /* NDAudioSuite */,
+				4AB0810A1CE3F98900C5C26E /* NDAudioSuite */,
 				3ABD673E1A36211D00E23A58 /* NDAudioSuiteTests */,
+				3ABD67251A36211D00E23A58 /* NDAudioSuiteSample */,
 			);
 		};
 /* End PBXProject section */
@@ -338,6 +418,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3ABD673D1A36211D00E23A58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AB081091CE3F98900C5C26E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -400,12 +487,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AEA7F061C9313ED00ABDB80 /* SongsTableViewController.m in Sources */,
-				3ADD64521A40AEE900C8AA55 /* NDAudioDownloadManager.m in Sources */,
 				3AEA7F081C9313ED00ABDB80 /* ViewController.m in Sources */,
 				3AEA7F071C9313ED00ABDB80 /* SongTableViewCell.m in Sources */,
-				3ABD67541A36228800E23A58 /* NSMutableArray+Shuffling.m in Sources */,
 				3AEA7EFC1C9313DA00ABDB80 /* main.m in Sources */,
-				3ABD67531A36228800E23A58 /* NDAudioPlayer.m in Sources */,
 				3AEA7EFF1C9313E400ABDB80 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,13 +502,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4AB081061CE3F98900C5C26E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AB0811D1CE3F9A400C5C26E /* NSMutableArray+Shuffling.m in Sources */,
+				4AB081191CE3F9A400C5C26E /* NDAudioDownloadManager.m in Sources */,
+				4AB0811B1CE3F9A400C5C26E /* NDAudioPlayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3ABD67411A36211D00E23A58 /* PBXTargetDependency */ = {
+		4AB081111CE3F98900C5C26E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3ABD67251A36211D00E23A58 /* NDAudioSuite */;
-			targetProxy = 3ABD67401A36211D00E23A58 /* PBXContainerItemProxy */;
+			target = 4AB0810A1CE3F98900C5C26E /* NDAudioSuite */;
+			targetProxy = 4AB081101CE3F98900C5C26E /* PBXContainerItemProxy */;
+		};
+		4AB0811F1CE3FA9E00C5C26E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AB0810A1CE3F98900C5C26E /* NDAudioSuite */;
+			targetProxy = 4AB0811E1CE3FA9E00C5C26E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -569,6 +668,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = NDAudioPlayerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.metova.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = NDAudioSuiteTests;
@@ -586,10 +686,62 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = NDAudioPlayerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.metova.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = NDAudioSuiteTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NDAudioSuite.app/NDAudioSuite";
+			};
+			name = Release;
+		};
+		4AB081151CE3F98900C5C26E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Andrew Pitchford (3AMJCLM379)";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = NDAudioSuite/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = metova.NDAudioSuite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4AB081161CE3F98900C5C26E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = NDAudioSuite/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = metova.NDAudioSuite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -605,7 +757,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3ABD67491A36211D00E23A58 /* Build configuration list for PBXNativeTarget "NDAudioSuite" */ = {
+		3ABD67491A36211D00E23A58 /* Build configuration list for PBXNativeTarget "NDAudioSuiteSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3ABD674A1A36211D00E23A58 /* Debug */,
@@ -622,6 +774,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4AB081141CE3F98900C5C26E /* Build configuration list for PBXNativeTarget "NDAudioSuite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AB081151CE3F98900C5C26E /* Debug */,
+				4AB081161CE3F98900C5C26E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
