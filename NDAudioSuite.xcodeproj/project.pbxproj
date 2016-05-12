@@ -26,6 +26,7 @@
 		4AB0811B1CE3F9A400C5C26E /* NDAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABD67501A36228800E23A58 /* NDAudioPlayer.m */; };
 		4AB0811C1CE3F9A400C5C26E /* NSMutableArray+Shuffling.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABD67511A36228800E23A58 /* NSMutableArray+Shuffling.h */; };
 		4AB0811D1CE3F9A400C5C26E /* NSMutableArray+Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABD67521A36228800E23A58 /* NSMutableArray+Shuffling.m */; };
+		4AE00EE81CE40541002E8080 /* NDAudioSuite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB0810B1CE3F98900C5C26E /* NDAudioSuite.framework */; };
 		B6ABEDB2B20501591F8317A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2F3D16A5B8DD1C4DA23F62 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +38,7 @@
 			remoteGlobalIDString = 4AB0810A1CE3F98900C5C26E;
 			remoteInfo = NDAudioSuite;
 		};
-		4AB0811E1CE3FA9E00C5C26E /* PBXContainerItemProxy */ = {
+		4AE00EC61CE404A7002E8080 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3ABD671E1A36211D00E23A58 /* Project object */;
 			proxyType = 1;
@@ -101,6 +102,10 @@
 		4AB0810B1CE3F98900C5C26E /* NDAudioSuite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NDAudioSuite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB0810D1CE3F98900C5C26E /* NDAudioSuite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NDAudioSuite.h; path = ../NDAudioSuite/NDAudioSuite.h; sourceTree = "<group>"; };
 		4AB0810F1CE3F98900C5C26E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../NDAudioSuite/Info.plist; sourceTree = "<group>"; };
+		4AE00ECF1CE404DA002E8080 /* Foo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
+		4AE00ED11CE404DA002E8080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AE00EDF1CE404F5002E8080 /* NDAudioSuiteTestsX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDAudioSuiteTestsX.m; sourceTree = "<group>"; };
+		4AE00EE11CE404F5002E8080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		841B38C095772C489DA18F1C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE00EE81CE40541002E8080 /* NDAudioSuite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +171,8 @@
 				4AB080F41CE3F23900C5C26E /* Related Files */,
 				3ABD67281A36211D00E23A58 /* NDAudioPlayer */,
 				3ABD67421A36211D00E23A58 /* NDAudioPlayerTests */,
+				4AE00ECE1CE404DA002E8080 /* Foo */,
+				4AE00EDE1CE404F5002E8080 /* NDAudioSuiteTestsX */,
 				3ABD67271A36211D00E23A58 /* Products */,
 				38D1EB0906C9DB654FC04E84 /* Pods */,
 				34FF87056D45A323DBE740E3 /* Frameworks */,
@@ -282,6 +290,24 @@
 			name = "Related Files";
 			sourceTree = "<group>";
 		};
+		4AE00ECE1CE404DA002E8080 /* Foo */ = {
+			isa = PBXGroup;
+			children = (
+				4AE00ECF1CE404DA002E8080 /* Foo.h */,
+				4AE00ED11CE404DA002E8080 /* Info.plist */,
+			);
+			path = Foo;
+			sourceTree = "<group>";
+		};
+		4AE00EDE1CE404F5002E8080 /* NDAudioSuiteTestsX */ = {
+			isa = PBXGroup;
+			children = (
+				4AE00EDF1CE404F5002E8080 /* NDAudioSuiteTestsX.m */,
+				4AE00EE11CE404F5002E8080 /* Info.plist */,
+			);
+			path = NDAudioSuiteTestsX;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -332,7 +358,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				4AB0811F1CE3FA9E00C5C26E /* PBXTargetDependency */,
+				4AE00EC71CE404A7002E8080 /* PBXTargetDependency */,
 			);
 			name = NDAudioSuiteTests;
 			productName = NDAudioPlayerTests;
@@ -377,7 +403,6 @@
 					};
 					3ABD673E1A36211D00E23A58 = {
 						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 3ABD67251A36211D00E23A58;
 					};
 					4AB0810A1CE3F98900C5C26E = {
 						CreatedOnToolsVersion = 7.3;
@@ -520,10 +545,10 @@
 			target = 4AB0810A1CE3F98900C5C26E /* NDAudioSuite */;
 			targetProxy = 4AB081101CE3F98900C5C26E /* PBXContainerItemProxy */;
 		};
-		4AB0811F1CE3FA9E00C5C26E /* PBXTargetDependency */ = {
+		4AE00EC71CE404A7002E8080 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4AB0810A1CE3F98900C5C26E /* NDAudioSuite */;
-			targetProxy = 4AB0811E1CE3FA9E00C5C26E /* PBXContainerItemProxy */;
+			targetProxy = 4AE00EC61CE404A7002E8080 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -582,7 +607,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -617,7 +642,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -657,7 +682,6 @@
 		3ABD674D1A36211D00E23A58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -672,14 +696,12 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.metova.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = NDAudioSuiteTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NDAudioSuite.app/NDAudioSuite";
 			};
 			name = Debug;
 		};
 		3ABD674E1A36211D00E23A58 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -690,7 +712,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.metova.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = NDAudioSuiteTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NDAudioSuite.app/NDAudioSuite";
 			};
 			name = Release;
 		};
@@ -782,6 +803,7 @@
 				4AB081161CE3F98900C5C26E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

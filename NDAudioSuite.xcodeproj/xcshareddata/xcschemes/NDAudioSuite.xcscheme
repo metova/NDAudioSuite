@@ -43,6 +43,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3ABD673E1A36211D00E23A58"
+               BuildableName = "NDAudioSuiteTests.xctest"
+               BlueprintName = "NDAudioSuiteTests"
+               ReferencedContainer = "container:NDAudioSuite.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
