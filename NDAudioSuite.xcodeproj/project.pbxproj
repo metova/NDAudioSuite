@@ -102,10 +102,6 @@
 		4AB0810B1CE3F98900C5C26E /* NDAudioSuite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NDAudioSuite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB0810D1CE3F98900C5C26E /* NDAudioSuite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NDAudioSuite.h; path = ../NDAudioSuite/NDAudioSuite.h; sourceTree = "<group>"; };
 		4AB0810F1CE3F98900C5C26E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../NDAudioSuite/Info.plist; sourceTree = "<group>"; };
-		4AE00ECF1CE404DA002E8080 /* Foo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
-		4AE00ED11CE404DA002E8080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4AE00EDF1CE404F5002E8080 /* NDAudioSuiteTestsX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDAudioSuiteTestsX.m; sourceTree = "<group>"; };
-		4AE00EE11CE404F5002E8080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		841B38C095772C489DA18F1C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,8 +167,6 @@
 				4AB080F41CE3F23900C5C26E /* Related Files */,
 				3ABD67281A36211D00E23A58 /* NDAudioPlayer */,
 				3ABD67421A36211D00E23A58 /* NDAudioPlayerTests */,
-				4AE00ECE1CE404DA002E8080 /* Foo */,
-				4AE00EDE1CE404F5002E8080 /* NDAudioSuiteTestsX */,
 				3ABD67271A36211D00E23A58 /* Products */,
 				38D1EB0906C9DB654FC04E84 /* Pods */,
 				34FF87056D45A323DBE740E3 /* Frameworks */,
@@ -288,24 +282,6 @@
 				4AB080F81CE3F24F00C5C26E /* Podfile */,
 			);
 			name = "Related Files";
-			sourceTree = "<group>";
-		};
-		4AE00ECE1CE404DA002E8080 /* Foo */ = {
-			isa = PBXGroup;
-			children = (
-				4AE00ECF1CE404DA002E8080 /* Foo.h */,
-				4AE00ED11CE404DA002E8080 /* Info.plist */,
-			);
-			path = Foo;
-			sourceTree = "<group>";
-		};
-		4AE00EDE1CE404F5002E8080 /* NDAudioSuiteTestsX */ = {
-			isa = PBXGroup;
-			children = (
-				4AE00EDF1CE404F5002E8080 /* NDAudioSuiteTestsX.m */,
-				4AE00EE11CE404F5002E8080 /* Info.plist */,
-			);
-			path = NDAudioSuiteTestsX;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
