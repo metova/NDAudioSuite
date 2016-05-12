@@ -21,6 +21,4 @@ Pod::Spec.new do |s|
 
     s.source_files  = "NDAudioPlayer"
     s.exclude_files = "NDAudioSuite/NDAudioPlayer/VCs"
-
-    s.framework  = "AVFoundation"
 end

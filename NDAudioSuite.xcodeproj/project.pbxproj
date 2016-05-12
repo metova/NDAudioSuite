@@ -27,7 +27,6 @@
 		4AB0811C1CE3F9A400C5C26E /* NSMutableArray+Shuffling.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABD67511A36228800E23A58 /* NSMutableArray+Shuffling.h */; };
 		4AB0811D1CE3F9A400C5C26E /* NSMutableArray+Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABD67521A36228800E23A58 /* NSMutableArray+Shuffling.m */; };
 		4AE00EE81CE40541002E8080 /* NDAudioSuite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB0810B1CE3F98900C5C26E /* NDAudioSuite.framework */; };
-		4AE00EEA1CE40972002E8080 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE00EE91CE40972002E8080 /* AVFoundation.framework */; };
 		B6ABEDB2B20501591F8317A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2F3D16A5B8DD1C4DA23F62 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -103,7 +102,6 @@
 		4AB0810B1CE3F98900C5C26E /* NDAudioSuite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NDAudioSuite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB0810D1CE3F98900C5C26E /* NDAudioSuite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NDAudioSuite.h; path = ../NDAudioSuite/NDAudioSuite.h; sourceTree = "<group>"; };
 		4AB0810F1CE3F98900C5C26E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../NDAudioSuite/Info.plist; sourceTree = "<group>"; };
-		4AE00EE91CE40972002E8080 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		841B38C095772C489DA18F1C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,7 +127,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AE00EEA1CE40972002E8080 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +136,6 @@
 		34FF87056D45A323DBE740E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4AE00EE91CE40972002E8080 /* AVFoundation.framework */,
 				2C2F3D16A5B8DD1C4DA23F62 /* libPods.a */,
 			);
 			name = Frameworks;
