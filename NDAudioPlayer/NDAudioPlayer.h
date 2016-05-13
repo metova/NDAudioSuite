@@ -56,7 +56,7 @@ typedef NS_ENUM(NSInteger, PlaybackStatus)
 
 // gives delegate current time on the track being played
 - (void) NDAudioPlayerTimeIsUpdated: (NDAudioPlayer * _Nonnull)sender
-                       withDuration:(CGFloat)duration;
+                       withCurrentTime:(CGFloat)currentTime;
 
 @end
 
@@ -72,7 +72,7 @@ typedef NS_ENUM(NSInteger, PlaybackStatus)
 /* prepareToPlay must be called before playAudio is called */
 - (void) prepareToPlay:(NSMutableArray * _Nonnull)playlist
                atIndex:(NSInteger)index
-             atVolumne:(CGFloat)volumne;
+             atVolume:(CGFloat)volume;
 
 /*  
     playAudio should only be called once the delegate fires indicating that audio is ready
@@ -86,7 +86,7 @@ typedef NS_ENUM(NSInteger, PlaybackStatus)
 - (void) stopAudio;
 
 /*
-    Basic functions of music plahying. Shuffle, skip 1 ahead, skip 1 back
+    Basic functions of music playing. Shuffle, skip 1 ahead, skip 1 back
  */
 - (void) shuffleTracks:(BOOL)enable;
 - (NSInteger) skipTrack;

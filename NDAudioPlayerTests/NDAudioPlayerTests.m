@@ -78,7 +78,7 @@
 {
     [self.fakePlayer prepareToPlay:[@[@"whatever"] mutableCopy]
                            atIndex:0
-                         atVolumne:1.0];
+                         atVolume:1.0];
     
     XCTAssertTrue([self.fakePlayer getCurrentTrackIndex] == 0);
 }
@@ -87,7 +87,7 @@
 {
     [self.fakePlayer prepareToPlay:self.playlist
                            atIndex:0
-                         atVolumne:1.0];
+                         atVolume:1.0];
     
     XCTAssertTrue([self.fakePlayer.playlist isEqualToArray:self.playlist]);
 }
@@ -96,7 +96,7 @@
 {
     [self.fakePlayer prepareToPlay:self.playlist
                            atIndex:0
-                         atVolumne:1.0];
+                         atVolume:1.0];
     
     [self.fakePlayer playAudio];
     
@@ -124,7 +124,7 @@
 {
     [self.fakePlayer prepareToPlay:self.playlist
                            atIndex:0
-                         atVolumne:1.0];
+                         atVolume:1.0];
     
     [self.fakePlayer playAudio];
     XCTAssertTrue([self.fakePlayer getCurrentTrackIndex] == 0);
@@ -140,7 +140,7 @@
 {
     [self.fakePlayer prepareToPlay:self.playlist
                            atIndex:0
-                         atVolumne:1.0];
+                         atVolume:1.0];
     
     [self.fakePlayer playAudio];
     [self.fakePlayer setVolume:0.5];
@@ -160,7 +160,7 @@
 
 - (void)testShuffleTracks
 {
-    [self.fakePlayer prepareToPlay:self.playlist atIndex:0 atVolumne:1.0];
+    [self.fakePlayer prepareToPlay:self.playlist atIndex:0 atVolume:1.0];
     
     XCTAssertTrue([[self.fakePlayer.playlist objectAtIndex:0] isEqual:[self.playlist objectAtIndex:0]]);
     XCTAssertTrue([[self.fakePlayer.playlist objectAtIndex:1] isEqual:[self.playlist objectAtIndex:1]]);

@@ -87,7 +87,7 @@ NSMutableArray *originals;
     {
         [self.player prepareToPlay:self.songList
                            atIndex:0
-                         atVolumne:0.5];
+                         atVolume:0.5];
     }
     
     // set up UI things
@@ -275,7 +275,7 @@ NSMutableArray *originals;
     [self.playButton setSelected:NO];
     [self.player prepareToPlay:self.songList
                        atIndex:0
-                     atVolumne:self.volumeSlider.value];
+                     atVolume:self.volumeSlider.value];
     [self playPressed:nil];
 }
 
@@ -308,17 +308,17 @@ currentDownloadIsCompleteWithRemainingDownloads:(NSUInteger)count
     [self putInformationInSongInfoCenter];
 }
 
-- (void)NDAudioPlayerTimeIsUpdated:(NDAudioPlayer *)sender withDuration:(CGFloat)duration
+- (void)NDAudioPlayerTimeIsUpdated:(NDAudioPlayer *)sender withCurrentTime:(CGFloat)currentTime
 {
-    NSLog(@"Duration: %f", duration);
-    self.currentTime = duration;
-    [self.progressBar setProgress:duration/[self.player getTotalDuration]
+    NSLog(@"Duration: %f", currentTime);
+    self.currentTime = currentTime;
+    [self.progressBar setProgress:currentTime/[self.player getTotalDuration]
                          animated:YES];
     
     int totalTime = (int)[self.player getTotalDuration] / 60;
-    int currentTimeMinutes = (int)duration / 60;
+    int currentTimeMinutes = (int)currentTime / 60;
     int totalTimeSeconds = (int)[self.player getTotalDuration] % 60;
-    int currentTimeSeconds = (int)duration % 60;
+    int currentTimeSeconds = (int)currentTime % 60;
     self.audioTimeLabel.text = [NSString stringWithFormat:@"%02i:%02i / %02i:%02i", currentTimeMinutes, currentTimeSeconds, totalTime, totalTimeSeconds];
 }
 
@@ -333,7 +333,7 @@ currentDownloadIsCompleteWithRemainingDownloads:(NSUInteger)count
 {
     [self.player prepareToPlay:self.songList
                        atIndex:index
-                     atVolumne:[self.player getAudioVolume]];
+                     atVolume:[self.player getAudioVolume]];
     [self.player playAudio];
     [self changeLabel];
 }
@@ -377,7 +377,7 @@ currentDownloadIsCompleteWithRemainingDownloads:(NSUInteger)count
         [self.songList addObject:urlString];
         [self.player prepareToPlay:self.songList
                            atIndex:0
-                         atVolumne:[self.player getAudioVolume]];
+                         atVolume:[self.player getAudioVolume]];
         [self playPressed:nil];
         NSMutableString *songStr = [@"Song: " mutableCopy];
         [songStr appendString:songName];

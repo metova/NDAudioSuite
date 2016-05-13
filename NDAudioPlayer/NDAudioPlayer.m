@@ -74,10 +74,10 @@
 
 - (void) prepareToPlay:(NSMutableArray *)playlist
                atIndex:(NSInteger)index
-             atVolumne:(CGFloat)volumne
+             atVolume:(CGFloat)volume
 {
     self.playlist = playlist;
-    self.volume = volumne;
+    self.volume = volume;
     shuffled = NO;
     
     currentTrackIndex = index;
@@ -359,10 +359,10 @@
 // gives delegate current time on the track being played
 - (void) notifyAudioDurationDelegate
 {
-    if([self.delegate respondsToSelector:@selector(NDAudioPlayerTimeIsUpdated:withDuration:)])
+    if([self.delegate respondsToSelector:@selector(NDAudioPlayerTimeIsUpdated:withCurrentTime:)])
     {
         [self.delegate NDAudioPlayerTimeIsUpdated:self
-                                     withDuration:[self getAudioCurrentTime]];
+                                     withCurrentTime:[self getAudioCurrentTime]];
     }
 }
 

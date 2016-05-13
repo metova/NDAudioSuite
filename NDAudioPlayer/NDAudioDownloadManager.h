@@ -35,14 +35,14 @@
 @protocol NDAudioDownloadManagerDelegate <NSObject>
 
 // Fires off as many times as downloadFromURL: withName: andExtension: is called
-- (void) NDAudioDownloadManager:(NDAudioDownloadManager *)sender
+- (void) NDAudioDownloadManager:(NDAudioDownloadManager *_Nonnull)sender
 currentDownloadIsCompleteWithRemainingDownloads:(NSUInteger)count;
 
 @end
 
 @interface NDAudioDownloadManager : NSObject
 
-@property (weak, nonatomic)id<NDAudioDownloadManagerDelegate> delegate;
+@property (weak, nonatomic)__nullable id<NDAudioDownloadManagerDelegate> delegate;
 
 /*
  downloadFileFromURL:withName:andExtension allows you specify what to name the file on the disk and what extension you want to give it
@@ -54,24 +54,24 @@ currentDownloadIsCompleteWithRemainingDownloads:(NSUInteger)count;
  
  getAllDownloadedFilesFromDiskWithExtension returns an array of files of the type of the specified extension
  */
-- (void)downloadFileFromURL:(NSURL *)url
-                   withName:(NSString *)fileNameOnDisk
-               andExtension:(NSString *)fileExtension
-                 completion:(void(^)(BOOL didDownload))completion;
+- (void)downloadFileFromURL:(NSURL *_Nonnull)url
+                   withName:(NSString *_Nonnull)fileNameOnDisk
+               andExtension:(NSString *_Nonnull)fileExtension
+                 completion:(void(^_Nonnull)(BOOL didDownload))completion;
 
-- (NSURL *)getDownloadedFileFromDiskWithName:(NSString *)fileToBePlayed
-                                andExtension:(NSString *)extension;
+- (NSURL *__nullable)getDownloadedFileFromDiskWithName:(NSString *_Nonnull)fileToBePlayed
+                                andExtension:(NSString *_Nonnull)extension;
 
-- (NSArray *)getAllDownloadedFilesFromDiskWithExtension:(NSString *)extension;
+- (NSArray *__nullable)getAllDownloadedFilesFromDiskWithExtension:(NSString *_Nonnull)extension;
 
 
 /*
  File helper methods to remove or get the extension of a file and delete a file
  */
-- (NSString *)getExtensionFromFile:(NSString *)fileNameWithExtension;
+- (NSString *_Nonnull)getExtensionFromFile:(NSString *_Nonnull)fileNameWithExtension;
 
-- (NSString *)removeExtensionFromFile:(NSString *)fileName;
+- (NSString *_Nonnull)removeExtensionFromFile:(NSString *_Nonnull)fileName;
 
-- (void)deleteFromDiskFileWithURL:(NSURL *)url;
+- (void)deleteFromDiskFileWithURL:(NSURL *_Nonnull)url;
 
 @end
