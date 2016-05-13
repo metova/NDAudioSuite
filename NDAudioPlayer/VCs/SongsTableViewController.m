@@ -7,7 +7,7 @@
 //
 
 #import "SongsTableViewController.h"
-#import "NDAudioDownloadManager.h"
+#import "NDAudioSuite.h"
 #import "SongTableViewCell.h"
 
 @interface SongsTableViewController ()

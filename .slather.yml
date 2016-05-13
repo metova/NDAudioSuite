@@ -1,0 +1,6 @@
+coverage_service: coveralls
+xcodeproj: NDAudioSuite.xcodeproj
+scheme: NDAudioSuite
+ignore:
+# System/SDK Files
+- ../*
