@@ -184,30 +184,30 @@
 }
 
 #pragma -mark NDDownloadManager tests
-
-- (void)testGetDownloadedFileFromDiskIfNotThere
-{
-    [self.fakePlayer prepareToPlay:self.playlist
-                           atIndex:0
-                         atVolumne:1.0];
-    
-    XCTAssertNil([self.fakeManager getDownloadedFileFromDiskWithName:@"test"
-                                                        andExtension:@"mp3"]);
-    
-    NSURL *fakeURL = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/s/npcc781ahkyxkoh/01%20Sunny%20Afternoon.mp3?dl=0"];
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, @"testFile.mp3"];
-    
-    NSData *data = [NSData dataWithContentsOfURL:fakeURL];
-    [data writeToFile:filePath
-           atomically:YES];
-    
-    // file is there
-    XCTAssertNotNil([self.fakeManager getDownloadedFileFromDiskWithName:@"testFile" andExtension:@"mp3"]);
-    
-}
+//
+//- (void)testGetDownloadedFileFromDiskIfNotThere
+//{
+//    [self.fakePlayer prepareToPlay:self.playlist
+//                           atIndex:0
+//                         atVolumne:1.0];
+//    
+//    XCTAssertNil([self.fakeManager getDownloadedFileFromDiskWithName:@"test"
+//                                                        andExtension:@"mp3"]);
+//    
+//    NSURL *fakeURL = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/s/npcc781ahkyxkoh/01%20Sunny%20Afternoon.mp3?dl=0"];
+//    
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *documentsDirectory = [paths objectAtIndex:0];
+//    NSString *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, @"testFile.mp3"];
+//    
+//    NSData *data = [NSData dataWithContentsOfURL:fakeURL];
+//    [data writeToFile:filePath
+//           atomically:YES];
+//    
+//    // file is there
+//    XCTAssertNotNil([self.fakeManager getDownloadedFileFromDiskWithName:@"testFile" andExtension:@"mp3"]);
+//    
+//}
 
 - (void)testGetExtensionFromFile
 {
@@ -231,55 +231,55 @@
     XCTAssertFalse([musicFileWithoutExtension isEqualToString:musicFile]);
 }
 
-- (void)testDeleteFromDisk
-{
-    NSURL *fakeURL = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/s/npcc781ahkyxkoh/01%20Sunny%20Afternoon.mp3?dl=0"];
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, @"testFile.mp3"];
-    
-    NSData *data = [NSData dataWithContentsOfURL:fakeURL];
-    [data writeToFile:filePath
-           atomically:YES];
-    
-    // file is there
-    XCTAssertNotNil([self.fakeManager getDownloadedFileFromDiskWithName:@"testFile" andExtension:@"mp3"]);
-    
-    // delete
-    [self.fakeManager deleteFromDiskFileWithURL:[self.fakeManager getDownloadedFileFromDiskWithName:@"testFile" andExtension:@"mp3"]];
-    
-    // file isn't there
-    XCTAssertNil([self.fakeManager getDownloadedFileFromDiskWithName:@"testFile" andExtension:@"mp3"]);
-    
-}
+//- (void)testDeleteFromDisk
+//{
+//    NSURL *fakeURL = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/s/npcc781ahkyxkoh/01%20Sunny%20Afternoon.mp3?dl=0"];
+//    
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *documentsDirectory = [paths objectAtIndex:0];
+//    NSString *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, @"testFile.mp3"];
+//    
+//    NSData *data = [NSData dataWithContentsOfURL:fakeURL];
+//    [data writeToFile:filePath
+//           atomically:YES];
+//    
+//    // file is there
+//    XCTAssertNotNil([self.fakeManager getDownloadedFileFromDiskWithName:@"testFile" andExtension:@"mp3"]);
+//    
+//    // delete
+//    [self.fakeManager deleteFromDiskFileWithURL:[self.fakeManager getDownloadedFileFromDiskWithName:@"testFile" andExtension:@"mp3"]];
+//    
+//    // file isn't there
+//    XCTAssertNil([self.fakeManager getDownloadedFileFromDiskWithName:@"testFile" andExtension:@"mp3"]);
+//    
+//}
 
-- (void)testGetAllFiles
-{
-    NSURL *fakeURL = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/s/npcc781ahkyxkoh/01%20Sunny%20Afternoon.mp3?dl=0"];
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, @"testFile.mp3"];
-    
-    NSData *data = [NSData dataWithContentsOfURL:fakeURL];
-    [data writeToFile:filePath
-           atomically:YES];
-    
-    fakeURL = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/s/npcc781ahkyxkoh/01%20Sunny%20Afternoon.mp3?dl=0"];
-    
-    paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    documentsDirectory = [paths objectAtIndex:0];
-    filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, @"testFile2.mp3"];
-    
-    data = [NSData dataWithContentsOfURL:fakeURL];
-    [data writeToFile:filePath
-           atomically:YES];
-    
-    
-    NSArray *arrayOfFiles = [self.fakeManager getAllDownloadedFilesFromDiskWithExtension:@"mp3"];
-    XCTAssertTrue([arrayOfFiles count] > 0);
-}
+//- (void)testGetAllFiles
+//{
+//    NSURL *fakeURL = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/s/npcc781ahkyxkoh/01%20Sunny%20Afternoon.mp3?dl=0"];
+//    
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *documentsDirectory = [paths objectAtIndex:0];
+//    NSString *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, @"testFile.mp3"];
+//    
+//    NSData *data = [NSData dataWithContentsOfURL:fakeURL];
+//    [data writeToFile:filePath
+//           atomically:YES];
+//    
+//    fakeURL = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/s/npcc781ahkyxkoh/01%20Sunny%20Afternoon.mp3?dl=0"];
+//    
+//    paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    documentsDirectory = [paths objectAtIndex:0];
+//    filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, @"testFile2.mp3"];
+//    
+//    data = [NSData dataWithContentsOfURL:fakeURL];
+//    [data writeToFile:filePath
+//           atomically:YES];
+//    
+//    
+//    NSArray *arrayOfFiles = [self.fakeManager getAllDownloadedFilesFromDiskWithExtension:@"mp3"];
+//    XCTAssertTrue([arrayOfFiles count] > 0);
+//}
 
 
 @end
