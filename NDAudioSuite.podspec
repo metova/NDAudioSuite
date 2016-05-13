@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "NDAudioSuite"
-    s.version      = "1.3.2"
+    s.version      = "2.0.0"
     s.summary      = "An audio library with audio streaming and downloading built in."
     s.description  = <<-DESC
                    NDAudioSuite was written so that you will no longer have to write audio
