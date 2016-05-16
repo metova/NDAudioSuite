@@ -68,7 +68,7 @@ typedef NS_ENUM(NSInteger, PlaybackStatus)
 @property (assign, nonatomic) BOOL isStopped;
 @property (assign, nonatomic) BOOL isPaused;
 @property (assign, nonatomic) NSInteger timeScale;
-@property (strong, nonatomic) NSString *audioSessionCategory;
+@property (nonnull, strong, nonatomic) NSString *audioSessionCategory;
 
 /* prepareToPlay must be called before playAudio is called */
 - (void) prepareToPlay:(NSMutableArray * _Nonnull)playlist
