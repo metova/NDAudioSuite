@@ -44,7 +44,6 @@
 @property (strong, nonatomic) NSMutableArray *playlist;
 @property (strong, nonatomic) NSMutableArray *shuffleTable;
 @property (strong, nonatomic) NSMutableArray *toHoldOntoAudioPlayer;
-@property (strong, nonatomic) NSString *audioSessionCategory;
 
 @end
 
