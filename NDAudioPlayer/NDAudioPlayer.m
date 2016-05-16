@@ -44,6 +44,7 @@
 @property (strong, nonatomic) NSMutableArray *playlist;
 @property (strong, nonatomic) NSMutableArray *shuffleTable;
 @property (strong, nonatomic) NSMutableArray *toHoldOntoAudioPlayer;
+@property (strong, nonatomic) NSString *audioSessionCategory;
 
 @end
 
@@ -62,6 +63,7 @@
         _isStopped = YES;
         _isPaused = NO;
         _timeScale = 1;
+        _audioSessionCategory = AVAudioSessionCategoryPlayAndRecord;
     }
     return self;
 }
@@ -220,7 +222,7 @@
 - (void) setupAudioPlayer
 {
     AVAudioSession* audioSession = [AVAudioSession sharedInstance];
-    [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    [audioSession setCategory:self.audioSessionCategory error:nil];
     
     NSURL *audioURL = [NSURL URLWithString:self.playlist[[self getCurrentTrackIndex]]];
     

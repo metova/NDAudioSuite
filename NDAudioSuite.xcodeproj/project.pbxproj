@@ -155,8 +155,8 @@
 			children = (
 				4AB0810D1CE3F98900C5C26E /* NDAudioSuite.h */,
 				4AB0810F1CE3F98900C5C26E /* Info.plist */,
-				3ADD64541A40B2EE00C8AA55 /* NDDownloadManager */,
 				3ADD64531A40B2DD00C8AA55 /* NDAudioPlayer */,
+				3ADD64541A40B2EE00C8AA55 /* NDDownloadManager */,
 			);
 			name = NDAudioSuite;
 			sourceTree = "<group>";

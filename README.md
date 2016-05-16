@@ -60,7 +60,7 @@ This is called when NDAudioPlayer is finished playing the current track. The nex
 ```objc
 - (void) NDAudioPlayerTimeIsUpdated: (NDAudioPlayer * _Nonnull)sender withCurrentTime:(CGFloat)currentTime
 ```
-This method is called as often as you prefer (default is every 1 second). You can change the frequency by setting the 'timeScale' property on NDAudioSuite (where '1' = 1 second).
+This method is called as often as you prefer (default is every 1 second). You can change the frequency by setting the `timeScale` property on NDAudioSuite. (where '1' = 1 second).
 Most often, this can be used to update audio track progress.
 
 ####Preparing To Play Audio
@@ -78,7 +78,7 @@ Swift
 let myPlayer = NDAudioSuite()
 ```
 
-Second, call 'prepareToPlay:atIndex:atVolume', passing in your playlist, where in the playlist to begin playing the audio, and the volume at which you want the audio played.
+Second, call `prepareToPlay:atIndex:atVolume`, passing in your playlist, where in the playlist to begin playing the audio, and the volume at which you want the audio played.
 
 ```objc
 [self.myPlayer prepareToPlay:self.myPlaylist atIndex:index  atVolume:volume];
@@ -88,13 +88,15 @@ Second, call 'prepareToPlay:atIndex:atVolume', passing in your playlist, where i
 myPlayer.prepareToPlay(myPlaylist, atIndex: index, atVolume:volume)
 ```
 
+Note: The audio session type can also be configured by setting the property `audioSessionCategory` to the audio session category of your choosing. The default value is `AVAudioSessionCategoryPlayAndRecord`.
+
 ####Audio Manipulation
 As you would expect, there are 4 methods that allow you to play, pause, resume, and stop your audio
 
 ```objc
 - (void)playAudio
 
-- (void)pausAudio
+- (void)pauseAudio
 
 - (void)resumeAudio
 
@@ -149,7 +151,7 @@ No audio player pod would be complete without the ability to rewind and fast for
 - (void)rewindToTime:(CGFloat) time
 ```
 
-Note: Use the FF/RW methods in conjunction with 'audioTimeIsUpdated:withCurrentTime:' in order to move forwards and backwards at whatever intervals you'd like.
+Note: Use the FF/RW methods in conjunction with `audioTimeIsUpdated:withCurrentTime:` in order to move forwards and backwards at whatever intervals you'd like.
 
 Finally, you can always set a new playlist for your NDAudioSuite object.
 
@@ -161,7 +163,7 @@ Finally, you can always set a new playlist for your NDAudioSuite object.
 
 ####Delegate
 
-NDAudioDownloadManager has only 1 delegate method which notifies you when a file has been downloaded. It is called as many times as you call 'downloadFileFromURL:withName:andExtension:completion'.
+NDAudioDownloadManager has only 1 delegate method which notifies you when a file has been downloaded. It is called as many times as you call `downloadFileFromURL:withName:andExtension:completion`.
 
 ```objc
 - (void) NDAudioDownloadManager:(NDAudioDownloadManager *_Nonnull)sender currentDownloadIsCompleteWithRemainingDownloads:(NSUInteger)count
@@ -169,7 +171,7 @@ NDAudioDownloadManager has only 1 delegate method which notifies you when a file
 
 ####File Manipulation
 
-NDAudioDownloadManager has 4 methods that help you manage downloading files. The aforementioned 'downloadFileFromURL:withName:andExtension:completion' along with 2 more:
+NDAudioDownloadManager has 4 methods that help you manage downloading files; the aforementioned `downloadFileFromURL:withName:andExtension:completion` along with 2 more:
 
 ```objc
 - (NSURL *__nullable)getDownloadedFileFromDiskWithName:(NSString *_Nonnull)fileToBePlayed andExtension:(NSString *_Nonnull)extension
@@ -179,7 +181,7 @@ NDAudioDownloadManager has 4 methods that help you manage downloading files. The
 - (void)deleteFromDiskFileWithURL:(NSURL *_Nonnull)url
 ```
 
-The method names are self explanatory. For Swift, the 2 non-void method above return an Optional.
+The method names are self explanatory. For Swift, the 2 non-void methods above return an Optional.
 
 ####File Name Helpers
 
