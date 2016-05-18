@@ -44,17 +44,31 @@ typedef NS_ENUM(NSInteger, PlaybackStatus)
 @protocol NDAudioPlayerDelegate <NSObject>
 
 @optional
-// Notifies delegate that audio is ready to play
+/** 
+ Notifies delegate that audio is ready to play
+ @param sender The NDAudioPlayer object that is ready to play
+ */
 - (void) NDAudioPlayerIsReady: (NDAudioPlayer * _Nonnull)sender;
 
-// Playlist Complete - would indicate no other tracks can be played
+/** 
+ Called when every track in the playlist has been played
+ @param sender The NDAudioPlayer that is done with it's playlist
+ */
 - (void) NDAudioPlayerPlaylistIsDone: (NDAudioPlayer * _Nonnull)sender;
 
-// Track Complete - returns the next index track to be played
+/** 
+ Called when a track is done playing
+ @param sender The NDAudioPlayer that was playing the Track
+ @param nextTrackIndex The index in the playlist of the next track
+ */
 - (void) NDAudioPlayerTrackIsDone: (NDAudioPlayer * _Nonnull)sender
                    nextTrackIndex:(NSInteger)index;
 
-// gives delegate current time on the track being played
+/** 
+ Gives delegate current time on the track being played
+ @param sender The NDAudioPlayer who's time is updated
+ @param currentTime The current time of the playing track in seconds
+ */
 - (void) NDAudioPlayerTimeIsUpdated: (NDAudioPlayer * _Nonnull)sender
                        withCurrentTime:(CGFloat)currentTime;
 
@@ -70,50 +84,109 @@ typedef NS_ENUM(NSInteger, PlaybackStatus)
 @property (assign, nonatomic) NSInteger timeScale;
 @property (nonnull, strong, nonatomic) NSString *audioSessionCategory;
 
-/* prepareToPlay must be called before playAudio is called */
+/** 
+ This method MUST be called before playAudio
+ 
+ @param playlist An array of urls that point to the audio files to be played
+ @param index The index in the playlist to be played first
+ @param volume The volume at which the audio is to be played
+ */
 - (void) prepareToPlay:(NSMutableArray * _Nonnull)playlist
                atIndex:(NSInteger)index
              atVolume:(CGFloat)volume;
 
-/*  
-    playAudio should only be called once the delegate fires indicating that audio is ready
-    pauseAudio/resumeAudio are self explanatory
-    stopAudio stops music and deallocates the music player. prepareToPlay would have to be called after stopAudio is called in order to 
-        play more songs
+/**
+ This method should only be called once the delegate fires indicating that audio is ready
  */
 - (void) playAudio;
+
+/**
+ Pauses the audio stream at it's current point
+ */
 - (void) pauseAudio;
+
+/**
+ Resumes the audio stream from where it was last paused
+ */
 - (void) resumeAudio;
+
+/** 
+ Stops the audio stream. Playing again from here will restart the stream from the beginning of the track
+ */
 - (void) stopAudio;
 
-/*
-    Basic functions of music playing. Shuffle, skip 1 ahead, skip 1 back
+/**
+Shuffles the tracks in the player's playlist
+ @param enable Indicates whether shuffling should be enabled or not
  */
 - (void) shuffleTracks:(BOOL)enable;
+
+/**
+ Skips to the next track in the playlist. If at the end of the playlist, goes back to the beginning
+ 
+ @return The new current track index
+ */
 - (NSInteger) skipTrack;
+
+/**
+ Skips to the previous track in the playlist. If at the beginning of the playlist, goes to the last track in the playlist
+ 
+ @return The new curremnt track index
+*/
 - (NSInteger) previousTrack;
 
-// returns the current index that is playing in the song table
+/**
+ Allows caller to retrieve current plyaing track index
+ 
+@return The index of the currently playing track
+ */
 - (NSInteger)getCurrentTrackIndex;
 
-/*
-    setAudioVolume adjust the volume to a desired level
-    getAudioDuration returns the total number of seconds in the current track
-    getAudioVolume returns the current level of volume
-    fadeOutWithIntervals causes volume to fade out at the intervals passed in
+/**
+    Adjusts the volume to a desired level
+ 
+    @param newVolume The new volume level
  */
 - (void) setAudioVolume:(CGFloat)newVolume;
+
+/**
+ Allows caller to retrieve the total duration of the currently playing track
+ 
+ @return The total number of seconds in the current track
+ */
 - (CGFloat) getTotalDuration;
+
+/**
+ Allows the caller to retieve the current volume level of the player 
+ 
+ @return The current level of volume
+ */
 - (CGFloat)getAudioVolume;
+
+/**
+  Causes volume to fade out at the intervals passed in
+ 
+  @param interval The intervals at which the fade needs to occur
+ */
 - (void)fadeOutWithIntervals:(CGFloat)interval;
 
-/*
-    FF/RW to time specified by the parameter. Used in conjunction with the audioTimeIsUpdated method, you can FF/RW a certain number of seconds
+/**
+    FF/RW to time specified by the parameter. Used in conjunction with the audioTimeIsUpdated method, you can FF a certain number of seconds
+    @param time The number of seconds to fast forward
  */
 - (void)fastForwardToTime:(CGFloat)time;
+
+/**
+ RW to time specified by the parameter. Used in conjunction with the audioTimeIsUpdated method, you can RW a certain number of seconds
+ 
+ @param time The number of seconds to rewind
+ */
 - (void)rewindToTime:(CGFloat) time;
 
-// give the audio player an entirely new playlist
+/**
+ give the audio player an entirely new playlist
+ @param newPlaylist The new playlist the audio player  will play through
+ */
 - (void)setPlaylistToArray:(NSMutableArray * _Nonnull)newPlaylist;
 
 
