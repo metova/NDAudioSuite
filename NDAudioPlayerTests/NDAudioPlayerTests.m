@@ -16,7 +16,11 @@
 @property (assign, nonatomic) CGFloat volume;
 @property (strong, nonatomic) AVPlayer *audioPlayer;
 
-
+-(void)itemDidFinishPlaying:(NSNotification *) notification;
+- (void) notifyAudioReadyDelegate;
+- (void) notifyAudioPlaylistDoneDelegate;
+- (void) notifyAudioTrackDoneDelegate;
+- (void) notifyAudioDurationDelegate;
 - (NSInteger)getCurrentTrackIndex;
 - (void) playAudio;
 - (void) pauseAudio;
@@ -47,7 +51,7 @@
 
 @end
 
-@interface NDAudioPlayerTests : XCTestCase
+@interface NDAudioPlayerTests : XCTestCase <NDAudioPlayerDelegate>
 
 @property (strong, nonatomic) NDAudioPlayer *fakePlayer;
 @property (strong, nonatomic) NDAudioDownloadManager *fakeManager;
@@ -96,8 +100,17 @@
 - (void)testFFRW
 {
     // doesn't work, come back to this.
-//    [self.fakePlayer fastForwardToTime:100];
-//    XCTAssertEqual([self.fakePlayer getAudioCurrentTime], 100);
+    [self.fakePlayer prepareToPlay:[@[@"https://dl.dropboxusercontent.com/s/npcc781ahkyxkoh/01%20Sunny%20Afternoon.mp3?dl=0"] mutableCopy]
+                           atIndex:0
+                          atVolume:1.0];
+    
+    [self.fakePlayer playAudio];
+    
+    [self.fakePlayer fastForwardToTime:15];
+    XCTAssertEqual([self.fakePlayer getAudioCurrentTime], 15);
+    
+    [self.fakePlayer rewindToTime:6];
+    XCTAssertEqual([self.fakePlayer getAudioCurrentTime], 6);
 }
 
 - (void)testNewPlaylist
@@ -212,9 +225,58 @@
     NSInteger current = [self.fakePlayer getCurrentTrackIndex];
     [self.fakePlayer shuffleTracks:NO];
     XCTAssertTrue(current == [self.fakePlayer getCurrentTrackIndex]); // test that shuffle set to no sets current track
+}
+
+- (void)testDelegates
+{
+    [self.fakePlayer prepareToPlay:[@[@"what"] mutableCopy]
+                           atIndex:0
+                          atVolume:1.0];
     
+    self.fakePlayer.delegate = self;
+    [self.fakePlayer notifyAudioReadyDelegate];
     
+    [self.fakePlayer notifyAudioPlaylistDoneDelegate];
+    [self.fakePlayer notifyAudioTrackDoneDelegate];
+    [self.fakePlayer fastForwardToTime:10];
+    [self.fakePlayer notifyAudioDurationDelegate];
+}
+
+- (void)testItemDidFinishPlaying
+{
+    [self.fakePlayer prepareToPlay:[@[@"h", @"e", @"l"] mutableCopy]
+                           atIndex:0
+                          atVolume:1.0];
+    NSNotification *notif = [[NSNotification alloc] initWithName:@"Test" object:nil userInfo:nil];
+    [self.fakePlayer itemDidFinishPlaying:notif];
+    XCTAssertEqual([self.fakePlayer getCurrentTrackIndex], 1);
     
+    [self.fakePlayer prepareToPlay:[@[@"h", @"e"] mutableCopy] atIndex:1 atVolume:1.0];
+    [self.fakePlayer itemDidFinishPlaying:notif];
+    XCTAssertEqual([self.fakePlayer getCurrentTrackIndex], 2);
+}
+
+#pragma -mark Audio Player delegates
+-(void)NDAudioPlayerIsReady:(NDAudioPlayer *)sender
+{
+    XCTAssertEqual(sender, self.fakePlayer);
+}
+
+-(void)NDAudioPlayerPlaylistIsDone:(NDAudioPlayer *)sender
+{
+    XCTAssertEqual(sender, self.fakePlayer);
+}
+
+-(void)NDAudioPlayerTrackIsDone:(NDAudioPlayer *)sender nextTrackIndex:(NSInteger)index
+{
+    XCTAssertEqual(sender, self.fakePlayer);
+    XCTAssertEqual(index, 0);
+}
+
+-(void)NDAudioPlayerTimeIsUpdated:(NDAudioPlayer *)sender withCurrentTime:(CGFloat)currentTime
+{
+    XCTAssertEqual(sender, self.fakePlayer);
+    XCTAssertEqual(currentTime, 10);
 }
 
 #pragma -mark NDDownloadManager tests
