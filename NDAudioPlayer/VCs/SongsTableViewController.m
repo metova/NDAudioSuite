@@ -129,7 +129,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
             NSURL *url = [self.downloadManager getDownloadedFileFromDiskWithName:newFileName
                                                                     andExtension:ext];
             
-            [self.downloadManager deleteFromDiskFileWithURL:url];
+            [self.downloadManager deleteFileWithURL:url];
             
             [self.songList removeObjectAtIndex:indexPath.row];
             [self.songsTableView deleteRowsAtIndexPaths:@[indexPath]
