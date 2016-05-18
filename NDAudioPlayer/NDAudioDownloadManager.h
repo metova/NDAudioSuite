@@ -37,7 +37,8 @@
 /**
  Notifies delegate that current download is complete
  
- @return The number of downloads remaining
+ @param sender The download manager object that is doing the downloading
+ @param count The number of downloads remaining
  */
 - (void) NDAudioDownloadManager:(NDAudioDownloadManager *_Nonnull)sender
 currentDownloadIsCompleteWithRemainingDownloads:(NSUInteger)count;
