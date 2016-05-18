@@ -26,6 +26,7 @@
 - (NSInteger) previousTrack;
 - (void) setAudioVolume:(CGFloat)newVolume;
 - (CGFloat) getAudioDuration;
+-(CGFloat) getAudioCurrentTime;
 - (CGFloat)getAudioVolume;
 - (void)fadeOutWithIntervals:(CGFloat)interval;
 - (void)fastForwardToTime:(CGFloat)time;
@@ -74,6 +75,15 @@
     self.fakePlayer = nil;
 }
 
+- (void)testSetAudioVolume
+{
+    [self.fakePlayer setAudioVolume:2.0];
+    XCTAssertTrue([self.fakePlayer getAudioVolume] == 2);
+    
+    [self.fakePlayer setAudioVolume:10.0];
+    XCTAssertTrue([self.fakePlayer getAudioVolume] == 10);
+}
+
 - (void)testGetCurrentIndex
 {
     [self.fakePlayer prepareToPlay:[@[@"whatever"] mutableCopy]
@@ -81,6 +91,22 @@
                          atVolume:1.0];
     
     XCTAssertTrue([self.fakePlayer getCurrentTrackIndex] == 0);
+}
+
+- (void)testFFRW
+{
+    // doesn't work, come back to this.
+//    [self.fakePlayer fastForwardToTime:100];
+//    XCTAssertEqual([self.fakePlayer getAudioCurrentTime], 100);
+}
+
+- (void)testNewPlaylist
+{
+    [self.fakePlayer prepareToPlay:[@[@"Song1", @"Song2", @"Song3"] mutableCopy] atIndex:0 atVolume:1.0];
+    XCTAssertTrue(self.fakePlayer.playlist.count == 3);
+    
+    [self.fakePlayer setPlaylistToArray:[@[@"Song1"] mutableCopy]];
+    XCTAssertTrue(self.fakePlayer.playlist.count == 1);
 }
 
 - (void)testPrepareToPlay
@@ -134,6 +160,9 @@
     
     [self.fakePlayer previousTrack];
     XCTAssertTrue([self.fakePlayer getCurrentTrackIndex] == 0);
+    
+    [self.fakePlayer previousTrack];
+    XCTAssertTrue([self.fakePlayer getCurrentTrackIndex] == self.playlist.count - 1);
 }
 
 - (void)testVolumeThings
@@ -178,7 +207,12 @@
     [self.fakePlayer skipTrack];
     [self.fakePlayer skipTrack];
     [self.fakePlayer skipTrack];
-//    XCTAssertTrue([self.fakePlayer getCurrentTrackIndex] != 1);
+    
+    
+    NSInteger current = [self.fakePlayer getCurrentTrackIndex];
+    [self.fakePlayer shuffleTracks:NO];
+    XCTAssertTrue(current == [self.fakePlayer getCurrentTrackIndex]); // test that shuffle set to no sets current track
+    
     
     
 }
