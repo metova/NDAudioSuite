@@ -362,8 +362,8 @@ currentDownloadIsCompleteWithRemainingDownloads:(NSUInteger)count
     NSString *ext = [self.downloadManager getExtensionFromFile:songName];
     songName = [self.downloadManager removeExtensionFromFile:songName];
     
-    NSURL *url = [self.downloadManager getDownloadedFileFromDiskWithName:songName
-                                                            andExtension:ext];
+    NSURL *url = [self.downloadManager getDownloadedFileWithName:songName
+                                                    andExtension:ext];
     
     if(self.player.isPlaying)
     {

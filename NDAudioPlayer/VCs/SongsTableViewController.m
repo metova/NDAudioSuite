@@ -47,14 +47,14 @@
 {
     [super viewWillAppear:animated];
     
-    self.songList = [[self.downloadManager getAllDownloadedFilesFromDiskWithExtension:@"mp3"] mutableCopy];
+    self.songList = [[self.downloadManager getAllDownloadedFilesWithExtension:@"mp3"] mutableCopy];
     NSLog(@"Song list: %@", self.songList);
 }
 
 
 - (void)getNewDownloads
 {
-    self.songList = [[self.downloadManager getAllDownloadedFilesFromDiskWithExtension:@"mp3"] mutableCopy];
+    self.songList = [[self.downloadManager getAllDownloadedFilesWithExtension:@"mp3"] mutableCopy];
     [self.songsTableView reloadData];
     [self.refresh endRefreshing];
 }
@@ -126,8 +126,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
             
             NSString *newFileName = [self.downloadManager removeExtensionFromFile:fileName];        
                                      
-            NSURL *url = [self.downloadManager getDownloadedFileFromDiskWithName:newFileName
-                                                                    andExtension:ext];
+            NSURL *url = [self.downloadManager getDownloadedFileWithName:newFileName
+                                                            andExtension:ext];
             
             [self.downloadManager deleteFileWithURL:url];
             

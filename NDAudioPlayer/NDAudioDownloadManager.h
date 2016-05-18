@@ -69,7 +69,7 @@ currentDownloadIsCompleteWithRemainingDownloads:(NSUInteger)count;
  @return A url to the file requested
  */
 
-- (NSURL *__nullable)getDownloadedFileFromDiskWithName:(NSString *_Nonnull)fileName
+- (NSURL *__nullable)getDownloadedFileWithName:(NSString *_Nonnull)fileName
                                 andExtension:(NSString *_Nonnull)extension;
 
 /**
@@ -77,7 +77,7 @@ currentDownloadIsCompleteWithRemainingDownloads:(NSUInteger)count;
  @param extension The extension of the files to be retrieved
  @return An array of all files stored in the documents directory with the given extension
  */
-- (NSArray *__nullable)getAllDownloadedFilesFromDiskWithExtension:(NSString *_Nonnull)extension;
+- (NSArray *__nullable)getAllDownloadedFilesWithExtension:(NSString *_Nonnull)extension;
 
 
 /**
