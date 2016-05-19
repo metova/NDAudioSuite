@@ -68,9 +68,17 @@
 
 @implementation NDAudioPlayerTests
 
-- (void)setUp {
+- (void)setUp
+{
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    // clear old files
+    NSArray *paths = [self.fakeManager getAllDownloadedFilesWithExtension:@"mp3"];
+    for (NSString *path in paths)
+    {
+        [self.fakeManager deleteFileWithURL:[NSURL URLWithString:path]];
+    }
+    
     self.fakePlayer = [NDAudioPlayer new];
     self.playlist = [@[@"song1", @"song2", @"song3, song4, song5, song6, song7, song8, song9, song10"] mutableCopy];
     self.notHit = YES;
@@ -79,10 +87,11 @@
     
 }
 
-- (void)tearDown {
+- (void)tearDown
+{
     // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
     self.fakePlayer = nil;
+    [super tearDown];
 }
 
 - (void)testSetAudioVolume
@@ -407,12 +416,6 @@
                              andExtension:@"mp3"
                                completion:nil];
     [self.fakeManager notifyDownloadCompleteDelegate];
-    
-    NSArray *paths = [self.fakeManager getAllDownloadedFilesWithExtension:@"mp3"];
-    for (NSString *path in paths)
-    {
-        [self.fakeManager deleteFileWithURL:[NSURL URLWithString:path]];
-    }
 }
 
 #pragma -mark NDDownloadManagerDelegate
