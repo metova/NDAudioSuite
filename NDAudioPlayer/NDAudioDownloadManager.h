@@ -54,13 +54,13 @@ currentDownloadIsCompleteWithRemainingDownloads:(NSUInteger)count;
  
  @param url The url to download the file from
  @param fileName The name to give the file once it is downloaded
- @param fileExtension The extension to give the file once it is downloaded (in the form 'mp3' not '.mp3')
+ @param fileExtension The extension to give the file once it is downloaded (in the form of 'mp3' not '.mp3')
  @param completion A completion block to be executed once downloading is finished
  */
 - (void)downloadFileFromURL:(NSURL *_Nonnull)url
                    withName:(NSString *_Nonnull)fileName
                andExtension:(NSString *_Nonnull)fileExtension
-                 completion:(void(^_Nonnull)(BOOL didDownload))completion;
+                 completion:(void(^__nullable)(BOOL didDownload))completion;
 
 /**
  Retrieve a file from the NSDocumentsDirectory
