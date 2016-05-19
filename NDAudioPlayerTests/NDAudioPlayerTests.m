@@ -419,7 +419,6 @@
 -(void)NDAudioDownloadManager:(NDAudioDownloadManager *)sender currentDownloadIsCompleteWithRemainingDownloads:(NSUInteger)count
 {
     XCTAssertEqual(self.fakeManager, sender);
-    XCTAssertEqual(count, 0);
 }
 
 @end
