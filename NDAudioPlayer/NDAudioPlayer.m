@@ -284,6 +284,7 @@
                         change:(NSDictionary *)change
                        context:(void *)context
 {
+    NSLog(@"status: %ldd",(long) (long)self.audioPlayer.currentItem.status);
     if (object == self.audioPlayer.currentItem && [keyPath isEqualToString:@"status"])
     {
         if (self.audioPlayer.currentItem.status == AVPlayerStatusReadyToPlay)
@@ -295,6 +296,10 @@
         else if (self.audioPlayer.status == AVPlayerStatusFailed)
         {
             NSLog(@"Error playing");
+        }
+        else
+        {
+            NSLog(@"Status unknown for audio player");
         }
     }
 }

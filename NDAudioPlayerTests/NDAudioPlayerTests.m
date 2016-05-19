@@ -17,6 +17,10 @@
 @property (strong, nonatomic) AVPlayer *audioPlayer;
 
 -(void)itemDidFinishPlaying:(NSNotification *) notification;
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context;
 - (void) notifyAudioReadyDelegate;
 - (void) notifyAudioPlaylistDoneDelegate;
 - (void) notifyAudioTrackDoneDelegate;
@@ -254,6 +258,19 @@
     [self.fakePlayer prepareToPlay:[@[@"h", @"e"] mutableCopy] atIndex:1 atVolume:1.0];
     [self.fakePlayer itemDidFinishPlaying:notif];
     XCTAssertEqual([self.fakePlayer getCurrentTrackIndex], 2);
+}
+
+- (void)testKeyPath
+{
+    NSString * keyPath = @"status";
+    
+    [self.fakePlayer prepareToPlay:[@[@"https://dl.dropboxusercontent.com/s/npcc781ahkyxkoh/01%20Sunny%20Afternoon.mp3?dl=0"] mutableCopy]
+                           atIndex:0
+                          atVolume:1.0];
+    [self.fakePlayer playAudio];
+    [self.fakePlayer observeValueForKeyPath:keyPath ofObject:self.fakePlayer.audioPlayer.currentItem change:nil context:nil];
+    //need to figure out this test
+    
 }
 
 #pragma -mark Audio Player delegates
