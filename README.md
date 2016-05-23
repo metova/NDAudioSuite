@@ -1,5 +1,7 @@
 # NDAudioSuite
 
+![NDAudioSuite](Assets/NDAudioSuiteBanner.png)
+
 [![Build Status](https://travis-ci.org/metova/NDAudioSuite.svg)](https://travis-ci.org/metova/NDAudioSuite)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/NDAudioSuite.svg)](https://img.shields.io/cocoapods/v/NDAudioSuite.svg)
 [![Documentation](https://img.shields.io/cocoapods/metrics/doc-percent/NDAudioSuite.svg)](http://cocoadocs.org/docsets/NDAudioSuite/)
