@@ -130,13 +130,13 @@ It is possible to set the audio volume after initial setup by using:
 You can get the current volume with:
 
 ```objc
-- (CGFloat)getAudioVolume;
+- (CGFloat)getAudioVolume
 ```
 
 You can also get the total duration of the current track:
 
 ```objc
-- (CGFloat) getTotalDuration;
+- (CGFloat) getTotalDuration
 ```
 
 Volume can be faded out using intervals that you set:
