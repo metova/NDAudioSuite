@@ -9,7 +9,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/NDAudioSuite.svg?style=flat)](http://cocoadocs.org/docsets/NDAudioSuite)
 [![Twitter](https://img.shields.io/badge/twitter-@Metova-3CAC84.svg)](http://twitter.com/metova)
 
-NDAudioSuite is an iOS audio file streaming engine that is easy to install and use. It also includes a lightweight file downloader that helps manage files on an iOS device.
+NDAudioSuite is an iOS audio file streaming engine that is easy to install and use. It also includes a lightweight file downloader API that helps manage files on an iOS device.
 
 -----
 
