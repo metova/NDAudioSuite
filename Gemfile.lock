@@ -78,6 +78,3 @@ DEPENDENCIES
   cocoapods (>= 0.32.1)
   ocunit2junit
   slather (= 2.0.5)!
-
-BUNDLED WITH
-   1.12.3
