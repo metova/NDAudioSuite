@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
     s.name         = "NDAudioSuite"
-    s.version      = "2.0.0"
+    s.version      = "2.1.0"
     s.summary      = "An audio library with audio streaming and downloading built in."
     s.description  = <<-DESC
                    NDAudioSuite was written so that you will no longer have to write audio
-                   players or audio downloaders for your app. It has a built in audio player
+                   players or file downloaders for your app. It has a built in audio player
                    that can stream audio from a URL. It also has a built in download manager 
-                   for audio files.
+                   for files.
                     DESC
 
     s.homepage     = "http://www.metova.com"
