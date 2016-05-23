@@ -56,7 +56,7 @@
 
 // download audio file to docuements directory.
 - (void)downloadFileFromURL:(NSURL *)url
-                   withName:(NSString *)fileNameOnDisk
+                   withName:(NSString *)fileName
                andExtension:(NSString *)fileExtension
                  completion:(void(^)(BOOL didDownload))completion
 {
@@ -65,19 +65,19 @@
                        
                        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
                        NSString *documentsDirectory = [paths objectAtIndex:0];
-                       NSMutableString *fileName = [fileNameOnDisk mutableCopy];
-                       [fileName appendString:@"."];
-                       [fileName appendString:fileExtension];
-                       NSString *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, fileName];
+                       NSMutableString *thisFileName = [fileName mutableCopy];
+                       [thisFileName appendString:@"."];
+                       [thisFileName appendString:fileExtension];
+                       NSString *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, thisFileName];
                        
-                       [self.downloadQueue addObject:fileName];
+                       [self.downloadQueue addObject:thisFileName];
                        
                        NSData *urlData = [NSData dataWithContentsOfURL:url];
                        [urlData writeToFile:filePath
                                  atomically:YES];
                        
                        dispatch_async(dispatch_get_main_queue(), ^{
-                           [self.downloadQueue removeObject:fileName];
+                           [self.downloadQueue removeObject:thisFileName];
                            [self notifyDownloadCompleteDelegate];
                        });
                    });
@@ -85,8 +85,8 @@
 
 // called to get the file from disk. prepareToPlay would need to be called on the returned object
 // will return nil if file requested to get from disk is not on disk
-- (NSURL *)getDownloadedFileFromDiskWithName:(NSString *)fileToBePlayed
-                                andExtension:(NSString *)extension
+- (NSURL *)getDownloadedFileWithName:(NSString *)fileName
+                        andExtension:(NSString *)extension
 {
     __block NSMutableArray *arrayOfSongs;
     NSURL *url;
@@ -94,7 +94,7 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     
-    NSMutableString *fullFileName = [fileToBePlayed mutableCopy];
+    NSMutableString *fullFileName = [fileName mutableCopy];
     [fullFileName appendString:@"."];
     [fullFileName appendString:extension];
     NSString *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, fullFileName];
@@ -131,7 +131,7 @@
 
 
 // get all files from the disk
-- (NSArray *)getAllDownloadedFilesFromDiskWithExtension:(NSString *)extension
+- (NSArray *)getAllDownloadedFilesWithExtension:(NSString *)extension
 {
     NSMutableArray *arrayOfFiles = [NSMutableArray new];
     
@@ -180,7 +180,7 @@
     return ext;
 }
 
-- (void)deleteFromDiskFileWithURL:(NSURL *)url
+- (void)deleteFileWithURL:(NSURL *)url
 {
     NSError *error;
     

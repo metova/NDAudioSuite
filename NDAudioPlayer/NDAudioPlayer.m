@@ -62,6 +62,7 @@
         _isStopped = YES;
         _isPaused = NO;
         _timeScale = 1;
+        _audioSessionCategory = AVAudioSessionCategoryPlayAndRecord;
     }
     return self;
 }
@@ -74,10 +75,10 @@
 
 - (void) prepareToPlay:(NSMutableArray *)playlist
                atIndex:(NSInteger)index
-             atVolumne:(CGFloat)volumne
+             atVolume:(CGFloat)volume
 {
     self.playlist = playlist;
-    self.volume = volumne;
+    self.volume = volume;
     shuffled = NO;
     
     currentTrackIndex = index;
@@ -220,7 +221,7 @@
 - (void) setupAudioPlayer
 {
     AVAudioSession* audioSession = [AVAudioSession sharedInstance];
-    [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    [audioSession setCategory:self.audioSessionCategory error:nil];
     
     NSURL *audioURL = [NSURL URLWithString:self.playlist[[self getCurrentTrackIndex]]];
     
@@ -283,6 +284,7 @@
                         change:(NSDictionary *)change
                        context:(void *)context
 {
+    NSLog(@"status: %ldd",(long) (long)self.audioPlayer.currentItem.status);
     if (object == self.audioPlayer.currentItem && [keyPath isEqualToString:@"status"])
     {
         if (self.audioPlayer.currentItem.status == AVPlayerStatusReadyToPlay)
@@ -294,6 +296,10 @@
         else if (self.audioPlayer.status == AVPlayerStatusFailed)
         {
             NSLog(@"Error playing");
+        }
+        else
+        {
+            NSLog(@"Status unknown for audio player");
         }
     }
 }
@@ -359,10 +365,10 @@
 // gives delegate current time on the track being played
 - (void) notifyAudioDurationDelegate
 {
-    if([self.delegate respondsToSelector:@selector(NDAudioPlayerTimeIsUpdated:withDuration:)])
+    if([self.delegate respondsToSelector:@selector(NDAudioPlayerTimeIsUpdated:withCurrentTime:)])
     {
         [self.delegate NDAudioPlayerTimeIsUpdated:self
-                                     withDuration:[self getAudioCurrentTime]];
+                                     withCurrentTime:[self getAudioCurrentTime]];
     }
 }
 

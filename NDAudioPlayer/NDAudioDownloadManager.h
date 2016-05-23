@@ -34,44 +34,71 @@
 
 @protocol NDAudioDownloadManagerDelegate <NSObject>
 
-// Fires off as many times as downloadFromURL: withName: andExtension: is called
-- (void) NDAudioDownloadManager:(NDAudioDownloadManager *)sender
+/**
+ Notifies delegate that current download is complete
+ 
+ @param sender The download manager object that is doing the downloading
+ @param count The number of downloads remaining
+ */
+- (void) NDAudioDownloadManager:(NDAudioDownloadManager *_Nonnull)sender
 currentDownloadIsCompleteWithRemainingDownloads:(NSUInteger)count;
 
 @end
 
 @interface NDAudioDownloadManager : NSObject
 
-@property (weak, nonatomic)id<NDAudioDownloadManagerDelegate> delegate;
+@property (weak, nonatomic)__nullable id<NDAudioDownloadManagerDelegate> delegate;
 
-/*
+/**
  downloadFileFromURL:withName:andExtension allows you specify what to name the file on the disk and what extension you want to give it
- NOTE: the extension parameter is just like standard Apple parameters for extensions. i.e. @"mp3" not @".mp3"
  
- getDownloadedFileFromDiskWithName:andExtension returns a url to the object on disk with the specified name
- NOTE: the extension parameter is just like standard Apple parameters for extensions. i.e. @"mp3" not @".mp3"
- NOTE: will return nil if the file requested is not on disk. Best practice is to do a nil check on the object housing the return before use
- 
- getAllDownloadedFilesFromDiskWithExtension returns an array of files of the type of the specified extension
+ @param url The url to download the file from
+ @param fileName The name to give the file once it is downloaded
+ @param fileExtension The extension to give the file once it is downloaded (in the form of 'mp3' not '.mp3')
+ @param completion A completion block to be executed once downloading is finished
  */
-- (void)downloadFileFromURL:(NSURL *)url
-                   withName:(NSString *)fileNameOnDisk
-               andExtension:(NSString *)fileExtension
-                 completion:(void(^)(BOOL didDownload))completion;
+- (void)downloadFileFromURL:(NSURL *_Nonnull)url
+                   withName:(NSString *_Nonnull)fileName
+               andExtension:(NSString *_Nonnull)fileExtension
+                 completion:(void(^__nullable)(BOOL didDownload))completion;
 
-- (NSURL *)getDownloadedFileFromDiskWithName:(NSString *)fileToBePlayed
-                                andExtension:(NSString *)extension;
-
-- (NSArray *)getAllDownloadedFilesFromDiskWithExtension:(NSString *)extension;
-
-
-/*
- File helper methods to remove or get the extension of a file and delete a file
+/**
+ Retrieve a file from the NSDocumentsDirectory
+ @param fileName Name of the file to be retrieved from the documents directory
+ @param extension The extension of the file to be retrieved from the documents directory
+ @return A url to the file requested
  */
-- (NSString *)getExtensionFromFile:(NSString *)fileNameWithExtension;
 
-- (NSString *)removeExtensionFromFile:(NSString *)fileName;
+- (NSURL *__nullable)getDownloadedFileWithName:(NSString *_Nonnull)fileName
+                                andExtension:(NSString *_Nonnull)extension;
 
-- (void)deleteFromDiskFileWithURL:(NSURL *)url;
+/**
+ Retrieve all files that have been downloaded
+ @param extension The extension of the files to be retrieved
+ @return An array of all files stored in the documents directory with the given extension
+ */
+- (NSArray *__nullable)getAllDownloadedFilesWithExtension:(NSString *_Nonnull)extension;
+
+
+/**
+ Gets the extension of a filename 
+ @param fileNameWithExtension The filename with the extension
+ @return The extension of the file passed in
+ */
+- (NSString *_Nonnull)getExtensionFromFile:(NSString *_Nonnull)fileNameWithExtension;
+
+/**
+ Removes the extension from a file name string
+ @param fileName The filename (with extension)
+ @return file name without the extension
+ */
+- (NSString *_Nonnull)removeExtensionFromFile:(NSString *_Nonnull)fileName;
+
+
+/**
+ Deletes file from the NSDocuemntsDirectory
+ @param url URL to the file to be deleted
+ */
+- (void)deleteFileWithURL:(NSURL *_Nonnull)url;
 
 @end
