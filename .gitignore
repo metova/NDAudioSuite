@@ -19,3 +19,7 @@ DerivedData
 
 #CocoaPods
 Pods
+
+# Slather
+bin/
+html/
