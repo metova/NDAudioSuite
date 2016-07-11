@@ -11,6 +11,7 @@
 		3ABD67371A36211D00E23A58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ABD67361A36211D00E23A58 /* Images.xcassets */; };
 		3ABD673A1A36211D00E23A58 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ABD67381A36211D00E23A58 /* LaunchScreen.xib */; };
 		3ABD67461A36211D00E23A58 /* NDAudioPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABD67451A36211D00E23A58 /* NDAudioPlayerTests.m */; };
+		3ACDB8ECDFE09523C046E78F /* libPods-NDAudioSuite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA0B664735DE2BE9754A9CD /* libPods-NDAudioSuite.a */; };
 		3AEA7EFC1C9313DA00ABDB80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA7EFB1C9313DA00ABDB80 /* main.m */; };
 		3AEA7EFF1C9313E400ABDB80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA7EFE1C9313E400ABDB80 /* AppDelegate.m */; };
 		3AEA7F061C9313ED00ABDB80 /* SongsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA7F011C9313ED00ABDB80 /* SongsTableViewController.m */; };
@@ -27,7 +28,6 @@
 		4AB0811C1CE3F9A400C5C26E /* NSMutableArray+Shuffling.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABD67511A36228800E23A58 /* NSMutableArray+Shuffling.h */; };
 		4AB0811D1CE3F9A400C5C26E /* NSMutableArray+Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABD67521A36228800E23A58 /* NSMutableArray+Shuffling.m */; };
 		4AE00EE81CE40541002E8080 /* NDAudioSuite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB0810B1CE3F98900C5C26E /* NDAudioSuite.framework */; };
-		B6ABEDB2B20501591F8317A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2F3D16A5B8DD1C4DA23F62 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2C2F3D16A5B8DD1C4DA23F62 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A5C12DB9F811A55D813A5E3 /* Pods-NDAudioSuite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NDAudioSuite.release.xcconfig"; path = "Pods/Target Support Files/Pods-NDAudioSuite/Pods-NDAudioSuite.release.xcconfig"; sourceTree = "<group>"; };
+		2CA0B664735DE2BE9754A9CD /* libPods-NDAudioSuite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NDAudioSuite.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4AE9351A409B4700E5F55E /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		3ABD67261A36211D00E23A58 /* NDAudioSuite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NDAudioSuite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ABD672A1A36211D00E23A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,7 +88,6 @@
 		3AEA7F031C9313ED00ABDB80 /* SongTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SongTableViewCell.m; path = VCs/SongTableViewCell.m; sourceTree = "<group>"; };
 		3AEA7F041C9313ED00ABDB80 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = VCs/ViewController.h; sourceTree = "<group>"; };
 		3AEA7F051C9313ED00ABDB80 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = VCs/ViewController.m; sourceTree = "<group>"; };
-		3D513489458490A92FF2C4A4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4AB080F51CE3F24F00C5C26E /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		4AB080F61CE3F24F00C5C26E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4AB080F71CE3F24F00C5C26E /* NDAudioSuite.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NDAudioSuite.podspec; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		4AB0810B1CE3F98900C5C26E /* NDAudioSuite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NDAudioSuite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB0810D1CE3F98900C5C26E /* NDAudioSuite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NDAudioSuite.h; path = ../NDAudioSuite/NDAudioSuite.h; sourceTree = "<group>"; };
 		4AB0810F1CE3F98900C5C26E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../NDAudioSuite/Info.plist; sourceTree = "<group>"; };
-		841B38C095772C489DA18F1C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DFD2AE8CDB9D11019D8F3A2C /* Pods-NDAudioSuite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NDAudioSuite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NDAudioSuite/Pods-NDAudioSuite.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AB081121CE3F98900C5C26E /* NDAudioSuite.framework in Frameworks */,
-				B6ABEDB2B20501591F8317A0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,25 +126,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ACDB8ECDFE09523C046E78F /* libPods-NDAudioSuite.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		34FF87056D45A323DBE740E3 /* Frameworks */ = {
+		1287358D50206722DBA820B4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2C2F3D16A5B8DD1C4DA23F62 /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		38D1EB0906C9DB654FC04E84 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3D513489458490A92FF2C4A4 /* Pods.debug.xcconfig */,
-				841B38C095772C489DA18F1C /* Pods.release.xcconfig */,
+				DFD2AE8CDB9D11019D8F3A2C /* Pods-NDAudioSuite.debug.xcconfig */,
+				2A5C12DB9F811A55D813A5E3 /* Pods-NDAudioSuite.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -168,8 +160,8 @@
 				3ABD67281A36211D00E23A58 /* NDAudioPlayer */,
 				3ABD67421A36211D00E23A58 /* NDAudioPlayerTests */,
 				3ABD67271A36211D00E23A58 /* Products */,
-				38D1EB0906C9DB654FC04E84 /* Pods */,
-				34FF87056D45A323DBE740E3 /* Frameworks */,
+				1287358D50206722DBA820B4 /* Pods */,
+				4578AE5E1F8DB79E4B0D8166 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,6 +258,14 @@
 			name = NDDownloadManager;
 			sourceTree = "<group>";
 		};
+		4578AE5E1F8DB79E4B0D8166 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CA0B664735DE2BE9754A9CD /* libPods-NDAudioSuite.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4AB080F41CE3F23900C5C26E /* Related Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,12 +305,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ABD67491A36211D00E23A58 /* Build configuration list for PBXNativeTarget "NDAudioSuiteSample" */;
 			buildPhases = (
-				8C4145A4EC8DD9CD71FEB695 /* Check Pods Manifest.lock */,
 				3ABD67221A36211D00E23A58 /* Sources */,
 				3ABD67231A36211D00E23A58 /* Frameworks */,
 				3ABD67241A36211D00E23A58 /* Resources */,
-				38C291FAEAFD391E2BF6ABC8 /* Copy Pods Resources */,
-				164D1EB39F021F17894F4C44 /* Embed Pods Frameworks */,
 				4AB081171CE3F98900C5C26E /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -345,10 +342,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AB081141CE3F98900C5C26E /* Build configuration list for PBXNativeTarget "NDAudioSuite" */;
 			buildPhases = (
+				9FA79895293860BD63B48B29 /* [CP] Check Pods Manifest.lock */,
 				4AB081061CE3F98900C5C26E /* Sources */,
 				4AB081071CE3F98900C5C26E /* Frameworks */,
 				4AB081081CE3F98900C5C26E /* Headers */,
 				4AB081091CE3F98900C5C26E /* Resources */,
+				8F49F385FD4A60AC88BB4011 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -435,44 +434,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		164D1EB39F021F17894F4C44 /* Embed Pods Frameworks */ = {
+		8F49F385FD4A60AC88BB4011 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NDAudioSuite/Pods-NDAudioSuite-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		38C291FAEAFD391E2BF6ABC8 /* Copy Pods Resources */ = {
+		9FA79895293860BD63B48B29 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8C4145A4EC8DD9CD71FEB695 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,7 +611,6 @@
 		};
 		3ABD674A1A36211D00E23A58 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D513489458490A92FF2C4A4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
@@ -643,7 +626,6 @@
 		};
 		3ABD674B1A36211D00E23A58 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 841B38C095772C489DA18F1C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -698,6 +680,7 @@
 		};
 		4AB081151CE3F98900C5C26E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFD2AE8CDB9D11019D8F3A2C /* Pods-NDAudioSuite.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -724,6 +707,7 @@
 		};
 		4AB081161CE3F98900C5C26E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A5C12DB9F811A55D813A5E3 /* Pods-NDAudioSuite.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_IDENTITY = "";
