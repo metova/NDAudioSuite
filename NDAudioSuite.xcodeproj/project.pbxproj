@@ -91,7 +91,7 @@
 		4AB080F51CE3F24F00C5C26E /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		4AB080F61CE3F24F00C5C26E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4AB080F71CE3F24F00C5C26E /* NDAudioSuite.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NDAudioSuite.podspec; sourceTree = "<group>"; };
-		4AB080F81CE3F24F00C5C26E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		4AB080F81CE3F24F00C5C26E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4AB080FD1CE3F4AD00C5C26E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4AB080FF1CE3F50F00C5C26E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4AB081011CE3F52700C5C26E /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
