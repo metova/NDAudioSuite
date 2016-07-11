@@ -63,6 +63,7 @@
         _isPaused = NO;
         _timeScale = 1;
         _audioSessionCategory = AVAudioSessionCategoryPlayAndRecord;
+        _audioSessionCategoryOption = AVAudioSessionCategoryOptionDefaultToSpeaker;
     }
     return self;
 }
@@ -222,6 +223,7 @@
 {
     AVAudioSession* audioSession = [AVAudioSession sharedInstance];
     [audioSession setCategory:self.audioSessionCategory error:nil];
+    [audioSession setCategory:self.audioSessionCategory withOptions:self.audioSessionCategoryOption error:nil];
     
     NSURL *audioURL = [NSURL URLWithString:self.playlist[[self getCurrentTrackIndex]]];
     

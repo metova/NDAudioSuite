@@ -81,8 +81,21 @@ typedef NS_ENUM(NSInteger, PlaybackStatus)
 @property (assign, nonatomic) BOOL isPlaying;
 @property (assign, nonatomic) BOOL isStopped;
 @property (assign, nonatomic) BOOL isPaused;
+
+/**
+ The time scale for how often NDAudioPlayerTimeIsUpdated:withCurrentTime called
+ **/
 @property (assign, nonatomic) NSInteger timeScale;
+
+/**
+ The audio session category you'd like to use. Default is AVAudioSessionCategoryPlayAndRecord
+ **/
 @property (nonnull, strong, nonatomic) NSString *audioSessionCategory;
+
+/**
+ The audio session category option you'd like to use. Default is AVAudioSessionCategoryOptionDefaultToSpeaker
+ **/
+@property (assign, nonatomic) NSUInteger audioSessionCategoryOption;
 
 /** 
  This method MUST be called before playAudio
