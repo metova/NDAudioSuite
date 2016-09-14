@@ -100,7 +100,7 @@ typedef NS_ENUM(NSInteger, PlaybackStatus)
 /** 
  This method MUST be called before playAudio
  
- @param playlist An array of urls that point to the audio files to be played
+ @param playlist An array of urlStrings that point to the audio files to be played
  @param index The index in the playlist to be played first
  @param volume The volume at which the audio is to be played
  */

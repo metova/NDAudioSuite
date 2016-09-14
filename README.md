@@ -80,7 +80,7 @@ Swift
 let myPlayer = NDAudioSuite()
 ```
 
-Second, call `prepareToPlay:atIndex:atVolume`, passing in your playlist, where in the playlist to begin playing the audio, and the volume at which you want the audio played.
+Second, call `prepareToPlay:atIndex:atVolume`, passing in your playlist (an array of URL *strings*), where in the playlist to begin playing the audio, and the volume at which you want the audio played.
 
 ```objc
 [self.myPlayer prepareToPlay:self.myPlaylist atIndex:index  atVolume:volume];
