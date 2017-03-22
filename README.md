@@ -65,7 +65,7 @@ This is called when NDAudioPlayer is finished playing the current track. The nex
 This method is called as often as you prefer (default is every 1 second). You can change the frequency by setting the `timeScale` property on NDAudioSuite. (where '1' = 1 second).
 Most often, this can be used to update audio track progress.
 
-####Preparing To Play Audio
+#### Preparing To Play Audio
 In order to play your audio, you will need to do 2 things:
 
 First, create an instance of NDAudioSuite.
@@ -80,7 +80,7 @@ Swift
 let myPlayer = NDAudioSuite()
 ```
 
-Second, call `prepareToPlay:atIndex:atVolume`, passing in your playlist, where in the playlist to begin playing the audio, and the volume at which you want the audio played.
+Second, call `prepareToPlay:atIndex:atVolume`, passing in your playlist (an array of string type URLs), where in the playlist to begin playing the audio, and the volume at which you want the audio played.
 
 ```objc
 [self.myPlayer prepareToPlay:self.myPlaylist atIndex:index  atVolume:volume];
@@ -92,7 +92,7 @@ myPlayer.prepareToPlay(myPlaylist, atIndex: index, atVolume:volume)
 
 Note: The audio session type can also be configured by setting the property `audioSessionCategory` to the audio session category of your choosing. The default value is `AVAudioSessionCategoryPlayAndRecord`.
 
-####Audio Manipulation
+#### Audio Manipulation
 As you would expect, there are 4 methods that allow you to play, pause, resume, and stop your audio
 
 ```objc
@@ -161,9 +161,9 @@ Finally, you can always set a new playlist for your NDAudioSuite object.
 - (void)setPlaylistToArray:(NSMutableArray * _Nonnull)newPlaylist
 ```
 
-###NDAudioDownloadManager
+### NDAudioDownloadManager
 
-####Delegate
+#### Delegate
 
 NDAudioDownloadManager has only 1 delegate method which notifies you when a file has been downloaded. It is called as many times as you call `downloadFileFromURL:withName:andExtension:completion`.
 
@@ -171,7 +171,7 @@ NDAudioDownloadManager has only 1 delegate method which notifies you when a file
 - (void) NDAudioDownloadManager:(NDAudioDownloadManager *_Nonnull)sender currentDownloadIsCompleteWithRemainingDownloads:(NSUInteger)count
 ```
 
-####File Manipulation
+#### File Manipulation
 
 NDAudioDownloadManager has 4 methods that help you manage downloading files; the aforementioned `downloadFileFromURL:withName:andExtension:completion` along with 2 more:
 
@@ -185,7 +185,7 @@ NDAudioDownloadManager has 4 methods that help you manage downloading files; the
 
 The method names are self explanatory. For Swift, the 2 non-void methods above return an Optional.
 
-####File Name Helpers
+#### File Name Helpers
 
 NDAudioDownloadManager also has 2 method that help you with getting and removing extensions from file names
 
